@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>反馈申请</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/appliance.css' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  	  		function khbf()
+		{
+			
+    window.location.href='__STATIC__/muban/信息技术学院综合素质测评方法.pdf';
+		}
+	</script>
+ </head>
+ <body>
+   <div id='first'></div>
+   <a id='a_first' href='{:url('index/index')}'>＜&nbsp;&nbsp;反馈申请</a><br/><br/>
+   <div id='div_main'><!--主盒子-->
+
+	<center>
+
+		{volist name='fan' id='vo' empty="<center><h1>暂无处理完成申请或您未提交申请！</h1></center>"}
+					<?php
+            $path = '__STATIC__'.$vo['jpg'];
+			?>
+	<form><!--表单-->
+	<div id='div_form'><!--1-->
+	  <div id='div_response'>反馈状态</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+
+<!--table1-->
+	<table class='table_form' id='table1_form' cellspacing=0>
+			<tr>
+	  <td class='td_left'>活动名称:</td>
+	  <td class='td_right'>{$vo.act_name}</td>
+			</tr>
+			<tr>
+		<td class='td_left'>分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数:</td>
+		<td class='td_right'>{$vo.grade}</td>
+			</tr>
+			<tr>
+	  <td class='td_left'>反馈原因:</td>
+	  <td class='td_right'>{$vo.act_script}</td>
+			</tr>
+	</table>
+<!--table1结束--> 
+<!--table2-->
+	<table class='table_form' cellspacing=0>
+	  <tr><td class='td_left_d'>处理结果</td></tr>
+	  <tr><td class='td_left_dd'>{$vo.result}</td></tr>
+	</table>
+	</div><!--1-->
+	</form><!--表单结束-->
+	{/volist}
+		<center>
+	<div id='footer' style="margin-top:120%;">
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+		</center>
+	</center>
+  </div>
+ </body>
+</html>

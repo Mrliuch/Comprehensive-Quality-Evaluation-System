@@ -1,0 +1,441 @@
+<!doctype html>
+<!-- 添加考评 -->
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus?">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+        function sss()
+  {
+    document.getElementById('if1').src="{:url('index/index')}";
+  }
+  function myCheck()
+            {
+               for(var i=0;i<document.form.elements.length-1;i++)
+               {
+                  if(document.form.elements[i].value=="")
+                  {
+                     alert("请填入学号！");
+                     document.form.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}   
+	   function myCheck1()
+            {
+               for(var i=0;i<document.form1.elements.length-1;i++)
+               {
+                  if(document.form1.elements[i].value=="")
+                  {
+                     alert("请填入姓名！");
+                     document.form1.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  
+  </script>
+  <style>
+  body
+
+        {
+
+            margin: 0px;
+
+        }
+  .a1{
+      text-align: left;
+		font-family: 'Microsoft Yahei';
+		position:absolute;
+		float: left;
+		width:100%;
+		height:80px;
+		background-color:#ffffff;
+  
+  }
+    .a2{
+		position:relative;
+	    box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+      border-radius: 3px 3px 3px 3px;
+		font-family:幼圆;
+        top:30px;
+		width:76%;
+		margin: 0 auto;
+		height:200px;
+		background-color:#ffffff;
+  
+  }
+  .a3{
+		position:relative;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+  top: -8px;
+  }
+  .a6{
+	position:relative;
+
+  
+  }
+.a-upload{
+                padding: 4px 10px;
+                line-height: 28px;
+                position: relative;
+                cursor: pointer;
+                color: #fff;
+                background-color: #0cab73;
+                border-color: #204d74;
+                border-radius: 6px 6px 6px 6px;
+                overflow: hidden;
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+				text-decoration:none;
+            }
+            .a-upload input{
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .a-upload:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.a7{position: relative;
+					left:45%;
+					top:39px;
+				float:left;
+			}
+			.a8{
+					position: absolute;
+					left:85%;
+					top:60px;
+					float:left;
+			}
+			.s_btn {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 14px;
+				height: 25px;
+				letter-spacing: 1px;
+				outline: none;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+   .b1{
+	    box-shadow: 0 5px 6px rgba(100, 100, 100, 0.3);
+      border-radius: 3px 3px 3px 3px;
+		font-family:幼圆;
+	    position:relative;
+		margin: 0 auto;
+        top: 50px;
+		width:76%;
+		height:200px;
+		background-color:#ffffff;
+  
+  }
+
+  .b3{
+	position:absolute;
+	left:15%;
+	top:45%;
+  }
+				  .header-search{
+				  position:relative;
+				  top:10%;
+				  left:71%;
+				width: 120px;
+				height: 45px;
+				margin:6px 6px 6px 6px;
+				float: left;
+				display: inline-block;
+				}
+				.right-search{
+				display: inline-block;
+				border-radius: 6px 6px 6px 6px;
+				position: relative;
+				}
+				.search-text {
+
+				width: 120px;
+				height: 26px;
+				color: #bababa;
+				font-size: 14px;
+				border: 1px cadetblue solid;
+				line-height: 35px;
+				padding-left: 10px;
+				background: #f9f9f9;
+				float: left;
+				border-radius: 6px 6px 6px 6px;
+				}.search-ic {
+        background: #0cab73;
+        font-family:幼圆;
+        border-radius: 6px 6px 6px 6px;
+        border: 0;
+        color: #fff;
+        font-size: 14px;
+        height: 25px;
+        letter-spacing: 1px;
+        width: 90px;
+				}
+					  .header-search .search-ic input{
+                
+            }
+				 .header-search .search-ic:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+            }
+			.b2{
+				
+					 position: absolute;
+					 top:100px;
+					left:30px;
+					
+					 
+			}
+			.b22{
+					position: relative;
+		left:6%;
+		width:98%;
+		height:90%;
+  
+			}
+			.b_btn {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 14px;
+				height: 25px;
+				letter-spacing: 1px;
+				outline: none;
+				vertical-align: top;
+				width: 90px;
+				height:30px; 
+				position: relative;
+				top:95px;
+				left:410px;
+			}
+				   .b_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .b_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			 
+			.b4{
+				 	position: absolute;
+					top:97%;
+					left:45%;
+				 text-decoration:none;
+				 color: #808080;
+				 font-family:幼圆;
+			
+			}	
+			
+#tbl3{
+  position: absolute;
+          left:73%;
+          top: 78px
+
+        }
+  </style>
+ </head>
+ <body bgcolor='ededed'>
+  <!--<div class='a1'><font>考评系统</font></div>-->
+  <div class='a2'>
+		<div class='a3'><strong>请{$name}同学上传考核文件</strong></div></br>
+		<div class='a4'><hr></div>
+		<div class='a5'></div>
+		<form action="{:url('index/add/add')}" method="post" enctype="multipart/form-data">
+		<div class='a6'>
+			<div class='a7'><a href="javascript:;" class="a-upload mr10" >
+			<input type="file" name="file" >上传文件</a>
+
+		</div>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>注：点击"点击上传"按钮后请不要重复点击，可能因为数据较多反应较慢，如果点击多次可能造成数据重复存储 <br><center><span style="color: red">*切记只点击1次，等待显示成功即可</span></center> 
+    </b>
+			</div>
+			<div class='a8'>
+			<a href="__STATIC__/muban/muban.xlsx"><input  value=" &nbsp;下载模板" class="s_btn" ><br><br></a>
+			<input type="submit" value="点击上传" class="s_btn" ><br><br>
+      <input value="  查看上传" class="s_btn" onclick="admin_edit('查看上传','{:url("index/add/view")}','4','','510')"></div>
+		</div>
+  </div>
+  </form>
+  <div class='b1'>
+  <div class='a3'><strong>手动添加考评</strong></div></br>
+		<div class='a4'><hr></div>
+		<div class='a5'></div>
+				<table  id='tbl3' width='20%' height='100px'>
+				<tr height='50%'><td width='60%' valign='top'><form class="right-search" action="{:url('index/add/chaxun')}" method="post"  onSubmit="return myCheck()" name='form'>
+				<input type='hidden' name='scope' value='project'/>
+				<input type="text" class="search-text" placeholder="输入学号" name="xh">
+      </td><td>
+				<button type="submit" class="search-ic" >检索</button>
+      <br/><br/>
+				</form></td></tr><tr><td>
+        <form class="right-search" action="{:url('index/add/chaxunn')}" method="post"  onSubmit="return myCheck1()" name='form1'>
+        <input type='hidden' name='scope' value='project'/>
+        <input type="text" class="search-text" placeholder="输入姓名" name="xm">
+        </td><td>
+        <button type="submit" class="search-ic" >检索</button>
+        </form>
+				</td></tr></table>
+			<div class='b2'>
+      <p>手动添加考评需要按学号或按姓名或按专业查询</p>
+			</div>
+
+		</div>	
+		<div class='b4' style="margin-bottom: 20px; position: absolute; left: 43%">
+		<a href=''style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>|<a href="{:url('first/index/develop')}" style='text-decoration:none;'>提出建议</a>
+		</div>
+
+
+
+
+        <script src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+        <script src="__STATIC__/admin/js/x-layui.js" charset="utf-8"></script>
+
+		       <script>
+            layui.use(['laydate','element','laypage','layer'], function(){
+                $ = layui.jquery;//jquery
+              laydate = layui.laydate;//日期插件
+              lement = layui.element();//面包导航
+              laypage = layui.laypage;//分页
+              layer = layui.layer;//弹出层
+
+              //以上模块根据需要引入
+
+              laypage({
+                cont: 'page'
+                ,pages: 100
+                ,first: 1
+                ,last: 100
+                ,prev: '<em><</em>'
+                ,next: '<em>></em>'
+              }); 
+              
+              var start = {
+                min: laydate.now()
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+                ,choose: function(datas){
+                  end.min = datas; //开始日选好后，重置结束日的最小日期
+                  end.start = datas //将结束日的初始值设定为开始日
+                }
+              };
+              
+              var end = {
+                min: laydate.now()
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+                ,choose: function(datas){
+                  start.max = datas; //结束日选好后，重置开始日的最大日期
+                }
+              };
+              
+              document.getElementById('LAY_demorange_s').onclick = function(){
+                start.elem = this;
+                laydate(start);
+              }
+              document.getElementById('LAY_demorange_e').onclick = function(){
+                end.elem = this
+                laydate(end);
+              }
+              
+            });
+
+            //批量删除提交
+             function delAll () {
+                layer.confirm('确认要删除吗？',function(index){
+                    //捉到所有被选中的，发异步进行删除
+                    layer.msg('删除成功', {icon: 1});
+                });
+             }
+             /*添加*/
+            function admin_add(title,url,w,h){
+                x_admin_show(title,url,w,h);
+            }
+
+             /*停用*/
+            function admin_stop(obj,id){
+                layer.confirm('确认要停用吗？',function(index){
+                    //发异步把用户状态进行更改
+                    $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="admin_start(this,id)" href="javascript:;" title="启用"><i class="layui-icon">&#xe62f;</i></a>');
+                    $(obj).parents("tr").find(".td-status").html('<span class="layui-btn layui-btn-disabled layui-btn-mini">已停用</span>');
+                    $(obj).remove();
+                    layer.msg('已停用!',{icon: 5,time:1000});
+                });
+            }
+
+            /*启用*/
+            function admin_start(obj,id){
+                layer.confirm('确认要启用吗？',function(index){
+                    //发异步把用户状态进行更改
+                    $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="admin_stop(this,id)" href="javascript:;" title="停用"><i class="layui-icon">&#xe601;</i></a>');
+                    $(obj).parents("tr").find(".td-status").html('<span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span>');
+                    $(obj).remove();
+                    layer.msg('已启用!',{icon: 6,time:1000});
+                });
+            }
+            //编辑
+            function admin_edit (title,url,id,w,h) {
+                x_admin_show(title,url,w,h); 
+            }
+            /*删除*/
+            function admin_del(obj,id){
+                layer.confirm('确认要删除吗？',function(index){
+                    //发异步删除数据
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!',{icon:1,time:1000});
+                });
+            }
+            </script>
+            
+ </body>
+</html>

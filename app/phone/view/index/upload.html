@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>查看成绩</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/upload.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+ 	<div id='first' style="height:20px;"></div>
+  <a id='a_first' href="{:url('index/index')}">＜&nbsp;&nbsp;首页</a><br/><br/>
+  <div id='div_main'><!--主盒子-->
+  <center>
+  <form action="{:url('index/ckkpa')}" method="post"><!--第一个表单-->
+	<div id='div_up'>
+	  <div id='score_look'>&nbsp;&nbsp;查看综合测评单</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+	   <div class='div_father'><!--父盒子-->
+	     <div id='div_sun1' class='div_sun'>
+	  <div class='div_left'>查询学年:</div>
+	  <select class='input_right' name="xn">
+	     <option value="2018">2018-2019学年</option>
+		 <option value="2019">2019-2020学年</option>
+		 <option value="2020">2020-2021学年</option>
+		 <option value="2021">2021-2022学年</option>
+		 <option value="2022">2022-2023学年</option>
+		 <option value="2023">2023-2024学年</option>
+		 <option value="2024">2024-2025学年</option>
+		 <option value="2025">2025-2026学年</option>
+	  </select>
+	     </div>
+		 <div id='div_sun2' class='div_sun'>
+	  <div class='div_left'>查询学期:</div>
+       <select class='input_right' name="xq">
+	     <option value="1">第一学期</option>
+		 <option value="2">第二学期</option>
+	  </select>
+	     </div>
+		 </div><!--父盒子结束--><br/>
+	<button id='button_submit'>查询</button>
+	</div>
+	</form>
+  <form action="{:url("index/viewgradeaa")}" method="post"><!--第二个表单-->
+	<div id='div_down'>
+	  <div id='level_look'>进行查看排名</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+	   <div class='div_father'><!--父盒子-->
+	     <div id='div_sun1' class='div_sun'>
+	  <div class='div_left'>选择学年:</div>
+	  <select class='input_right' name="xn">
+	     <option value="2018">2018-2019学年</option>
+		 <option value="2019">2019-2020学年</option>
+		 <option value="2020">2020-2021学年</option>
+		 <option value="2021">2021-2022学年</option>
+		 <option value="2022">2022-2023学年</option>
+		 <option value="2023">2023-2024学年</option>
+		 <option value="2024">2024-2025学年</option>
+		 <option value="2025">2025-2026学年</option>
+	  </select>
+	     </div>
+		 <div id='div_sun2' class='div_sun'>
+	  <div class='div_left'>选择学期:</div>
+	  <select class='input_right' name="xq">
+	     <option value="1">第一学期</option>
+		 <option value="2">第二学期</option>
+	  </select>
+	     </div>
+		 </div><!--父盒子结束-->
+		 <div class='div_father' id='div_father1'><!--父盒子-->
+	     <div id='div_sun1' class='div_sun'>
+	  <div class='div_left'>输入代码:</div>
+	  <input class='input_right' name="nj" placeholder="例：12165"/>
+	     </div>
+			 <div id='div_sun2' class='div_sun'>
+		 			 <div class='div_left'>选择类型:
+		 			 </div>
+
+					  <select class='input_right' name="lx">
+					     <option value="1">考评成绩排名</option>
+						 <option value="2">学分绩成绩排名</option>
+						 <option value="3">综合测评成绩排名</option>
+					  </select>
+		     </div>
+		     <p><font size="0.5" color="gray">*代码说明：以121651为例，12（学院）16（年级）5（专业）1（班级）</font></p>
+		 </div><!--父盒子结束--><br/><br/><br/>
+	<button id='button_submit'>查询</button>
+	</div>
+	</form>
+	<div id='footer' style="font-size:11px;margin-top:20%;">
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+  </center>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,94 @@
+			.a2{
+		 box-shadow: 0 2px 3px rgba(100, 100, 100, 0.8);
+		font-family:свт╡;
+	    position: absolute;
+        left:190px;
+        top: 90px;
+		width:1060px;
+		height:300px;
+		background-color:#ffffff;
+}
+.a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+	top:8px;
+  
+  }
+    .a6{
+	position:relative;
+
+  
+  }
+  .a7{position: relative;
+				left:80px;
+				top:50px;
+				float:left;
+			}
+			.a8{
+					position: relative;
+					left:800px;
+					top:50px;
+					float:left;
+			}
+			.a-upload{
+                padding: 4px 10px;
+                line-height: 28px;
+                position: relative;
+                cursor: pointer;
+                color: #fff;
+                background-color: #0cab73;
+                border-color: #204d74;
+                border-radius: 6px 6px 6px 6px;
+                overflow: hidden;
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+				text-decoration:none;
+            }
+            .a-upload input{
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .a-upload:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.s_btn {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 20px;
+				height: 33px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }

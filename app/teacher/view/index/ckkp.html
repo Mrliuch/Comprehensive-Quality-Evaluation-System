@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/sy.css"/>
+	<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/sy2.css"/>
+  <script type="text/javascript" src='__STATIC__/admin/js/.js'></script>
+  <title>Document</title>
+  <script>
+   function myCheck()
+            {
+               for(var i=0;i<document.form.elements.length-1;i++)
+               {
+                  if(document.form.elements[i].value=="")
+                  {
+                     alert("未填入学院班级！");
+                     document.form.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}   
+
+   function myCheck1()
+            {
+               for(var i=0;i<document.form1.elements.length-1;i++)
+               {
+                  if(document.form1.elements[i].value=="")
+                  {
+                     alert("未填入学院班级！");
+                     document.form1.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  
+   function myCheck2()
+            {
+               for(var i=0;i<document.form2.elements.length-1;i++)
+               {
+                  if(document.form2.elements[i].value=="")
+                  {
+                     alert("未填入学院班级！");
+                     document.form2.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  
+ function myCheck3()
+            {
+               for(var i=0;i<document.form3.elements.length-1;i++)
+               {
+                  if(document.form3.elements[i].value=="")
+                  {
+                     alert("未输入年份或月份！");
+                     document.form3.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  function myCheck4()
+            {
+               for(var i=0;i<document.form4.elements.length-1;i++)
+               {
+                  if(document.form4.elements[i].value=="")
+                  {
+                     alert("未输入学号！");
+                     document.form3.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+}  
+</script>
+  <style>
+ .a2{
+	    box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+		font-family:幼圆;
+	    position: relative;
+	 	margin: 0 auto;
+		top:35px;
+		width:74%;
+		height:300px;
+		background-color:#ffffff;
+		border-radius: 5px 5px 5px 5px;
+
+  }
+  .a21{
+  border-radius: 5px 5px 5px 5px;
+  width:100%;
+
+  }
+  .a24{
+  
+  border-radius: 5px 5px 5px 5px;
+  width:100%;
+  }
+ 
+	.b4{
+			position: absolute;
+			top:75%;
+			left:42%;
+		 text-decoration:none;
+		 color: #808080;
+		 font-family:幼圆;
+
+	}
+	.e2{
+
+		position:relative;
+		top:45px;
+		left:2%;
+
+	}
+	.b1{
+	position:relative;
+		top:290px;
+	}
+
+			.s_btn1 {
+		font-size: 15px;
+		padding-top: 1px;
+		border-radius: 5px 5px 5px 5px;
+		width: 140px;
+				position: absolute;
+				left: 80%;
+	}
+
+	.s_btn2 {
+		background: #0cab73;
+		font-family:幼圆;
+		border-radius: 6px 6px 6px 6px;
+		border: 0;
+		color: #fff;
+		cursor: pointer;
+		font-size: 15px;
+		height: 30px;
+		letter-spacing: 1px;
+		outline: none;
+		padding-top: 1px;
+		vertical-align: top;
+		width: 120px;
+	}
+		  .s_btn2:hover{
+		color: #FFFFFF;
+		background: #337ab7;
+		border-color: #204d74;
+		text-decoration: none;
+	}
+.st_style{
+	border: 1px cadetblue solid;
+	background: #f9f9f9;
+	border-radius: 6px 6px 6px 6px;
+	box-sizing: border-box;
+	width: 130px;
+	height: 26px;
+	font-size: 14px;
+}
+.a22{
+	left: 2%;
+}
+	  .a3{
+		  font-family: 幼圆;
+	  }
+	  .a_online{
+		  text-decoration: none;
+	  }
+	.a30 {
+		position: absolute;
+		top: 800px;
+		left: 10%;
+	}
+	  .a31{
+		  position: absolute;
+		  top: 800px;
+		  left: 34%;
+	  }
+	  .a32{
+		  position: absolute;
+		  top: 800px;
+		  left: 54%;
+	  }
+	  	  .a322{
+		  position: absolute;
+		  top: 800px;
+		  left: 78%;
+	  }
+	  .a23{
+		  position: absolute;
+		  top: -6px;
+		  left: 80%;
+		  width: 140px;
+	  }
+  </style>
+	 <link rel="stylesheet" href="../../../../public/static/admin/css/sy.css">
+ </head>
+
+ <form action="{:url("teacher/cj/viewgrade1")}" method="post" name="form" onsubmit="return myCheck()">
+<div class='a2'>
+	<div class='a3'><strong>查看年级专业排名</strong></div></br>
+		<div class='a4'><hr></div>
+<div class='e2'>
+			<font size='3px'>学院年级班级:&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165" id='name' class="st_style">&nbsp;&nbsp;&nbsp;
+			<font size='3px'>查询学年：&nbsp;</font>
+				<select name="xn" class="st_style">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select >&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;</font>
+				<select name="xq" class="st_style">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="考评成绩排名" class='s_btn1' >
+					</br></br></br>
+	</form>
+
+	<form action="{:url("teacher/cj/viewgrade2")}" method="post" onsubmit='return myCheck1()'  name="form1">
+			<font size='3px'>学院年级班级:&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165" class="st_style"/>&nbsp;&nbsp;&nbsp;
+			<font size='3px'>查询学年：&nbsp;</font>
+				<select name="xn" class="st_style">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select>&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;</font>
+				<select name="xq" class="st_style">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="学分绩成绩排名" class='s_btn1'>
+									</br></br></br>
+	</form>
+
+
+
+
+	<form action="{:url("teacher/cj/viewgrade")}" method="post" onsubmit='return myCheck2()'  name="form2">
+			<font size='3px'>学院年级班级:&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165" class="st_style"/>&nbsp;&nbsp;&nbsp;
+			<font size='3px'>查询学年：&nbsp;</font>
+				<select name="xn" class="st_style">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select>&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;</font>
+				<select name="xq" class="st_style">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="综合测评成绩排名" class='s_btn1'>
+									</br></br></br>
+	</form>
+
+		</div>
+
+
+<div>
+<div class='a21'>
+		<div class='a3'><strong>查看已上传的考评</strong></div></br>
+		<div class='a4'><hr></div>
+
+		<div class='a22'>
+			<form action="{:url("view/index")}" method="post" onsubmit='return myCheck3()'  name="form3" >
+				<font size='3px' style="font-family: 幼圆">输入年份：</font>
+			<input type="text" name="year" placeholder="例：2018" class="st_style"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<font size='3px'style="font-family: 幼圆">输入月份：</font>
+			<input type="text" name="yue" placeholder="例：11" class="st_style"/>
+
+				<input type="submit" name="" value="查看已上传" class='s_btn1' style="left: 80%" >
+
+			</form>
+		</div>
+
+</div>
+
+
+
+<form action="{:url("index/view/viewcj")}" method="post" onsubmit='return myCheck4()'  name="form4">
+<div class='a24' style="top: 318px">
+		<div class='a3'><strong>查看同学成绩单</font></strong></div></br>
+		<div class='a4'><hr></div>
+		<div class='a25'  style="position: relative;top: 65px;left: 2%;font-family: 幼圆">
+		输入查询学号：&nbsp;<input placeholder="例：12165" type="text" name="xh" class="st_style"/>&nbsp;&nbsp;&nbsp;
+		查询学年：
+		<select name="xn" class="st_style">
+			<option value="2018">2018-2019学年</option>
+			<option value="2019">2019-2020学年</option>
+			<option value="2020">2020-20121学年</option>
+			<option value="2021">2021-2022学年</option>
+			<option value="2022">2022-2023学年</option>
+			<option value="2023">2023-2024学年</option>
+			<option value="2024">2024-2025学年</option>
+			<option value="2025">2025-2026学年</option>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;
+		查询学期：&nbsp;
+		<select name="xq" class="st_style">
+			<option value="1">第一学期</option>
+			<option value="2">第二学期</option>
+		</select>
+	</div>
+	<div style="position:absolute;margin: 0 auto;left: 82%;top: 100px">
+		<input type="submit" name="" value="查    询" class='s_btn2' style="position:absolute;width: 140px;left: 83%">
+	</div>
+</div>
+</form>
+
+
+<div class='a30'>
+	<a class="a_online" href="{:url("index/view/viewguan")}"><input type="button" name="" value="查看关联考评" class='s_btn1'></a>
+</div>
+<div class='a31'>
+	<a class="a_online" href="{:url("index/view/viewnull")}"><input type="button" name="" value="查看未审核考评" class='s_btn1'></a>
+</div>
+<div class='a32'>
+	<a class="a_online" href="{:url("index/view/viewload")}"><input type="button" name="" value="查看各上传考评" class='s_btn1'></a>
+</div>
+<div class='a322'>
+	<a class="a_online" href="{:url("view/notok")}"><input type="button" name="" value="查看该月未确认学生" class='s_btn1'></a>
+</div>
+
+	<div class='b4'style="position: relative;margin: 0 auto;top: 440px;left: 43%; margin-top: 70px;
+	margin-bottom: 40px">
+		<a href='#' style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}"' style='text-decoration:none;'>关于我们</a>
+	</div>
+
+
+			
+ </body>
+</html>

@@ -1,0 +1,69 @@
+.a1{
+		 box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+		font-family:свт╡;
+	    position: absolute;
+        left: 5%;
+        top: 90px;
+		width:1280px;
+		height:500px;
+		overflow:auto;
+		background-color:#ffffff;
+}
+  .a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+	top:8px;
+  
+  }
+  .a33{
+	position:absolute;
+	top:1000px;
+  
+  
+  }
+.btn{
+	position:absolute;
+	top:640px;
+	left:60%;
+
+}
+.b4{
+		position:absolute;
+		top:850px;
+		left:600px;
+
+}
+
+				.s_btn {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 15px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			

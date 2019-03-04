@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>授权管理</title>
+</head>
+<body>
+	<center>
+		<h1>修改授权信息</h1><br><br>
+<form action="{:url('cj/editcj')}?id={$grade.id}" method="post">
+学号：{$grade.student_id}<br><br>
+考评：<input type="text" name="kp" value="{$grade.sum_g1}"><br><br>
+期末：<input type="text" name="qm" value="{$grade.sum_g2}"><br><br>
+综合：{$grade.sum_g12}<br><br>
+<input type="submit" value="确认修改"><br><br><br><br>
+</form>
+</center>
+</body>
+</html>

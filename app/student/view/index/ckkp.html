@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/ckkp.css"/>
+	<script type="text/javascript" src='__STATIC__/admin/js/.js'></script>
+  <title>Document</title>
+  <script>
+		   function myCheck()
+            {
+               for(var i=0;i<document.form.elements.length-1;i++)
+               {
+                  if(document.form.elements[i].value=="")
+                  {
+                     alert("同学请留步！还没填学院班级呢！");
+                     document.form.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}   
+
+   function myCheck1()
+            {
+               for(var i=0;i<document.form1.elements.length-1;i++)
+               {
+                  if(document.form1.elements[i].value=="")
+                  {
+                     alert("同学请留步！还没填学院班级呢！");
+                     document.form1.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  
+   function myCheck2()
+            {
+               for(var i=0;i<document.form2.elements.length-1;i++)
+               {
+                  if(document.form2.elements[i].value=="")
+                  {
+                     alert("同学请留步！还没填学院班级呢！");
+                     document.form2.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+
+}
+
+</script>
+ 
+<style>
+	.s_btn {
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+				width:80px;
+
+			}
+				.s_btn1 {
+					position: absolute;;
+					margin: 0 auto;
+					left: 83%;
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+
+			}
+			select {
+
+    color: #495056;
+	
+    background: #f9f9f9;
+
+}
+		.a1{
+			border-radius: 5px 5px 5px 5px;
+			top:30px;
+			width:80%;
+			height:280px;
+			left:10%;
+			background-color:#ffffff;
+			    position: absolute;
+box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+			
+			}
+			 .a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+	top:8px;
+  
+  }
+			
+		.a8{
+			    box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+			border-radius: 5px 5px 5px 5px;
+			top:240px;
+			width:100%;
+			
+			
+			
+			}
+			.q3{
+			
+			position:relative;
+		
+			}
+			.q2{
+			
+				left:65%;
+				top:90px;
+			}
+			select{
+			border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+			}
+			.q31{
+				position:absolute;
+				left:35%;
+				top:110px;
+			
+			}
+			input{
+			border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+			}
+			
+		.b4{
+			position: absolute;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+		
+			left:40%;
+			top:650px;
+			margin-bottom: 20px
+		
+		
+		}
+</style>
+
+
+ </head>
+
+<form action="{:url('index/ckkpa')}" method="post">
+   <div class='a1'>
+		<div class='a3'>查看综合素质测评单</div></br>
+		<div class='a4'><hr></div>
+		<div class='q1'>
+			<font size='3px'>查询学年:&nbsp;</font>
+			<select name='xn'>
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+			</select>
+				<div class='q31'>
+			<input type="submit" name="" value="查 询" class='s_btn1'>
+			</div>
+			</div>
+			<div class='q2'>
+			<font size='3px'>查询学期:&nbsp;</font>
+			<select name="xq">
+				<option value="1">第一学期</option>
+				<option value="2">第二学期</option>
+			</select>
+</div>
+</form> 
+
+<!--查看排名-->
+
+<form action="{:url("index/viewgrade1")}" method="post" name="form" onsubmit="return myCheck()">
+ <div class='a8'>
+		<div class='a3'>查看排名</div></br>
+		<div class='a4'><hr></div>
+		<div class='e2' style="top: 40px">
+			<font size='3px'>输入学院年级班级:&nbsp;&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165" id='name'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<font size='3px'>选择查询学年：&nbsp;&nbsp;</font>
+				<select name="xn">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;&nbsp;</font>
+				<select name="xq">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="考评成绩排名" class='s_btn1' >
+					</br></br></br>
+	</form>
+
+	<form action="{:url("index/viewgrade2")}" method="post" onsubmit='return myCheck1()'  name="form1">
+			<font size='3px'>输入学院年级班级:&nbsp;&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<font size='3px'>选择查询学年：&nbsp;&nbsp;</font>
+				<select name="xn">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;&nbsp;</font>
+				<select name="xq">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="学分绩成绩排名" class='s_btn1' >
+									</br></br></br>
+	</form>
+
+
+
+
+	<form action="{:url("index/viewgrade")}" method="post" onsubmit='return myCheck2()'  name="form2">
+			<font size='3px'>输入学院年级班级:&nbsp;&nbsp;</font>
+			<input type="text" name="nj" placeholder="例：12165">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<font size='3px'>选择查询学年：&nbsp;&nbsp;</font>
+				<select name="xn">
+					<option value="2018">2018-2019学年</option>
+					<option value="2019">2019-2020学年</option>
+					<option value="2020">2020-2021学年</option>
+					<option value="2021">2021-2022学年</option>
+					<option value="2022">2022-2023学年</option>
+					<option value="2023">2023-2024学年</option>
+					<option value="2024">2024-2025学年</option>
+					<option value="2025">2025-2026学年</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font size='3px'>选择学期：&nbsp;&nbsp;</font>
+				<select name="xq">
+					<option value="1">第一学期</option>
+					<option value="2">第二学期</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="综合测评成绩排名" class='s_btn1'>
+									</br></br></br>
+	</form>
+
+		</div>
+
+</div>
+
+
+</center>
+
+
+	<div class='b4'>
+		<a href='#'style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>|<a href="{:url('first/index/develop')}" style='text-decoration:none;'>提出建议</a>
+		</div>
+		<center>
+				<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" style="font-size: 10px">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+		</center>	
+ </body>
+</html>

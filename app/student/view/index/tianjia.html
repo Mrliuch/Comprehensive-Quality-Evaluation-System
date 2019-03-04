@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 添加考评 -->
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus?">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/tianjia.css"/>
+  <title>Document</title>
+  <script type="text/javascript">
+  	function getVal0()
+	{
+		document.getElementById('if1').src="welcome";
+	}
+function getVal1()
+	{
+		document.getElementById('if1').src="tianjia";
+		
+
+	}
+function getVal2()
+	{
+		document.getElementById('if1').src='ckkp';
+	}
+function getVal3()
+	{
+		document.getElementById('if1').src='fankui';
+	}
+function getVal4()
+	{
+		document.getElementById('if1').src='';
+	}
+
+
+  </script>
+  <script>
+        function sss()
+  {
+    document.getElementById('if1').src="{:url('index/index')}";
+  }
+  		function tz()
+		{
+			
+    window.location.href='{:url('index/fankui')}';
+		}
+
+
+  </script>
+  <style>
+        table,table tr th, table tr td { border:1px solid #93d8aa; }
+        table { width: 700px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;}   
+		.btn{
+	position:absolute;
+	top:580px;
+	margin: 0 auto;
+	left:0;
+	right: 0;
+
+}
+	.s_btn {
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+				
+			}
+			.a1{
+			border-radius: 5px 5px 5px 5px;
+			top:30px;
+			width:90%;
+			
+			
+			}
+			table{
+				width:90%;
+
+			
+			}
+			.b4{
+				top:97%;
+				position: absolute;;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+
+			}
+
+    </style>
+ </head>
+ <body>
+<center>
+    
+	
+
+<div class='a1'style = "box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);">
+		<div class='a3'>
+			考评单
+		</div><br/>
+
+		<div class='a4'>
+			<hr>
+		</div><br/>
+
+<table width="100" height="100">
+	<tr>
+
+		<td >学号</td><td>姓名</td><td>类别</td><td colspan="3">{$v[0]['year']}年
+<?php
+    $a = count($v);
+    for($i=0;$i<$a;$i++){
+    echo $v[$i]['yue'].'  ';
+  }
+    ?>月<br><br>
+		</td>
+	</tr>
+	{volist name="aa" id="all"}
+	<tr>
+		<td rowspan='2'>{$xh}</td><td rowspan='2'>{$name}</td><td>加分</td><td colspan="2">{volist name="all" id="vo"}
+       {gt name="vo.grade" value="0"}
+       {$vo.activity}&nbsp;&nbsp;&nbsp;{$vo.grade}分</br>
+       {/gt}
+       {/volist}</td>
+	</tr>
+	<tr>
+		<td>减分 </td><td colspan="2">      {volist name="all" id="vo"}
+       {lt name="vo.grade" value="0"}
+
+       {$vo.activity}&nbsp;&nbsp;&nbsp;{$vo.grade}分
+       {/lt}
+       {/volist}</td>
+	</tr>
+	{/volist}
+    </table>
+</div>
+<div class='btn'>
+		
+		<input type='button' value='我要反馈' onclick='tz()' class='s_btn'>
+		<a href="{:url('student/index/stuok')}"><input type='button' value='确认无误' class='s_btn'></a></br>
+</div>
+     </table>
+     
+	 <div class='b4' style="margin-bottom: 20px">
+		<a href='#'style='text-decoration:none;'>信息技术学院</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{:url('first/index/develop')}" style='text-decoration:none;'>提出建议</a>
+	 </div>
+	 <br>
+	 <br>
+  </center>
+ </body>
+</html>

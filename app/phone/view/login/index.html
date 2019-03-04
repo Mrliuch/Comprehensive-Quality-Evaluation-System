@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/login.css">
+<script type="text/javascript" src="__STATIC__/admin/js/login.js"></script>
+ </head>
+ <body id='linear'>
+ 
+  <div  id='signin'>
+  	<form action="{:url('login/check')}" method="post">
+ <div><br/><font  id='ding' >学号</font></div>
+<input id='zh' name="xh" type='text' placeholder="学号" />
+
+<button type='submit' ' id='son'><font id='button'>查询</font></button>
+  </form>
+
+  </div>
+  <center><a href="{:url('admin/login/index')}"><h3>教师、学生干部入口</h3></a></center>
+ </body>
+</html>

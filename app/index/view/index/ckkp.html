@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+        <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/sy.css"/>
+	<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/sy3.css"/>
+  <title>Document</title>
+    <script>
+   function myCheck3()
+            {
+               for(var i=0;i<document.form3.elements.length-1;i++)
+               {
+                  if(document.form3.elements[i].value=="")
+                  {
+                     alert("未输入年份或月份！");
+                     document.form3.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}  function myCheck4()
+            {
+               for(var i=0;i<document.form4.elements.length-1;i++)
+               {
+                  if(document.form4.elements[i].value=="")
+                  {
+                     alert("未输入学号！");
+                     document.form3.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+}  
+  </script>
+  <style>
+   body
+
+        {
+
+            margin: 0px;
+
+        }
+
+
+						.b4{
+				 	position: absolute;
+					top:97%;
+				 text-decoration:none;
+				 color: #808080;
+				 font-family:幼圆;
+			
+			}	
+			.a21{position: relative;
+				top:33px;
+				margin:0 auto;
+				width:76%;
+				background-color:#ffffff;
+				   position: relative;
+				   height:200px;
+			    border-radius: 5px 5px 5px 5px;
+				   box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+			}
+			.a24{
+				top:50px;
+				border-radius: 5px 5px 5px 5px;
+				box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+				width:76%;
+				margin:0 auto
+			
+			}
+			 .a23{
+  
+			position:absolute;
+			top:25px;
+			left:76.5%;
+  
+  }
+   .a27{
+  
+  	position:absolute;
+			top:105px;
+			left:81.7%;
+  
+  }
+			.s_btn1 {
+				font-size: 17px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+
+			}
+
+			.s_btn2 {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 17px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 120px;
+			}
+		.s_btn2:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			input {
+ border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+}
+	
+			select {
+ border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+}
+  .a30
+  {
+  	position:absolute;
+			top:520px;
+		left:22%;
+
+  
+  }
+    .a31
+  {
+  	position:absolute;
+				top:520px;
+		left:44%;
+
+
+  
+  }
+  
+    .a32
+  {
+  	position:absolute;
+			top:520px;
+		left:66%;
+
+
+  
+  }
+  .b4{
+  	position: absolute;
+  	margin: 0 auto;
+ 
+  
+  
+  }
+  .b_btn2 {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 16px;
+				height: 25px;
+				letter-spacing: 1px;
+				outline: none;
+				vertical-align: top;
+				width: 120px;
+				height:30px; 
+				position: relative;
+			}
+
+            .b_btn2:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+
+			 
+  
+  </style>
+ </head>
+   <body bgcolor='ededed'>
+<div>
+<div class='a21'>
+		<div class='a3'>查看已上传的考评</div></br>
+		<div class='a4'><hr></div>
+		<div class='a22' style="top: 42px">
+		<form action="{:url("view/index")}" method="post" onsubmit='return myCheck3()'  name="form3" >
+		<font size='3px'>
+			输入年份：&nbsp;&nbsp;<input type="text" name="year" placeholder="例：2018"><br><br>
+			输入月份：&nbsp;&nbsp;<input type="text" name="yue" placeholder="例：11">
+		</font>
+		<div class='a23'>
+				<input type="submit" name="" value="查看已上传" class='b_btn2'>
+		</div>
+</form>
+</div>
+</div>
+
+<form action="{:url("index/view/viewcj")}" method="post" onsubmit='return myCheck4()'  name="form4">
+<div class='a24'>
+		<div class='a3'>查看同学成绩单</font></div></br>
+		<div class='a4'><hr></div>
+		<div class='a25'>
+		输入查询学号：&nbsp;<input type="text" name="xh"><br><br>
+		选择查询学年：
+		<select name="xn">
+			<option value="2018">2018-2019学年</option>
+			<option value="2019">2019-2020学年</option>
+			<option value="2020">2020-2021学年</option>
+			<option value="2021">2021-2022学年</option>
+			<option value="2022">2022-2023学年</option>
+			<option value="2023">2023-2024学年</option>
+			<option value="2024">2024-2025学年</option>
+			<option value="2025">2025-2026学年</option>
+		</select><br><br>
+		选择查询学期：
+		<select name="xq">
+			<option value="1">第一学期</option>
+			<option value="2">第二学期</option>
+		</select>
+	</div>
+		<div class='a27'>
+		<input type="submit" name="" value="查 询" class='s_btn2'>
+		</div>
+</div>
+</form>
+
+<div class='a30'>
+	<a href="{:url("index/view/viewguan")}"><input type="button" name="" value="查看关联考评" class='s_btn1'></a>
+</div>
+<div class='a31'>
+	<a href="{:url("index/view/viewnull")}"><input type="button" name="" value="查看未审核考评" class='s_btn1'></a>
+</div>
+<div class='a32'>
+	<a href="{:url("index/view/viewload")}"><input type="button" name="" value="查看各上传考评" class='s_btn1'></a>
+</div>
+
+	<div class='b4' style="margin-bottom: 20px">
+		<a href=''style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>|<a href="{:url('first/index/develop')}" style='text-decoration:none;'>提出建议</a>
+	</div>
+			
+ </body>
+</html>

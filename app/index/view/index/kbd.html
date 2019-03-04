@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>查看考评</title>
+
+ <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/kbd.css"/>
+ <script type="text/javascript" src="__STATIC__/admin/js/kbd.js"></script>
+<head>
+<body style="background-color:#EDEDED;">
+</head>
+
+
+
+<div class="head">
+	<input type="text" placeholder="输入学号">
+	<input type="button" class="button" value="检索">
+</div>
+
+<div class="body">
+	<img class="left" id="left" src="#1" alt="考评照片" width="400" height="500">
+	<img class="right" id="right" src="#2" alt="考评照片" width="400" height="500">
+</div >
+
+<div>
+	<input class="button1" type=image src="__STATIC__/admin/images/left.png" onclick="change_pic1()">
+	<input class="button2" type=image src="__STATIC__/admin/images/right.png" onclick="change_pic2()">
+	<input class="button3" type=image src="__STATIC__/admin/images/left.png" onclick="change_pic3()">
+	<input class="button4" type=image src="__STATIC__/admin/images/right.png" onclick="change_pic4()">
+</div>
+
+<div class="foot" style="text-align: center; margin-top: 40px;">
+	<a href="{:url('first/index/our')}"><small>信 息 技 术 学 院 | 关 于 我 们</small></a>
+</div>
+
+
+</body>
+</html>

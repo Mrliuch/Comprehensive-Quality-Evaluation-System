@@ -1,0 +1,164 @@
+
+			.b4{
+				position: absolute;
+			 text-decoration:none;
+			 color: #808080;
+			 font-family:свт╡;
+		
+		}	
+			.a1{
+		box-shadow: 0 2px 3px rgba(100, 100, 100, 0.8);
+		font-family:свт╡;
+	    position: absolute;
+        left: 5%;
+        top: 30px;
+		width:1280px;
+		height:280px;
+		background-color:#ffffff;
+}
+ .a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position:relative;
+	top:8px;
+  
+  }
+  .c1{
+  	position:relative;
+	top:40px;
+	left:100px;
+
+  }
+
+	select {
+    height: 27px;
+    line-height: 26px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: #495056;
+    width: 180px;
+    background: #dddddd;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.d1{
+  	position:relative;
+	left:850px;
+	top:10px;
+}
+.e1{
+  	position:relative;
+	left:600px;
+	top:120px;
+
+
+}
+.s_btn {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 20px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+
+
+			.s_btn1 {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 18px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 120px;
+			}
+			   .s_btn1 input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+            }
+            .s_btn1:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.a8{
+			
+			    box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+				font-family:свт╡;
+				position: relative;
+				top: 280px;
+				width:1280px;
+				height:300px;
+				background-color:#ffffff;
+			
+			
+			}
+			.e2{
+				position:relative;
+				left:30px;
+				top:30px;
+			
+			
+			}
+	.b4{
+		position:absolute;
+		top:800px;
+		left:530px;
+
+}
+.q1{
+		position:relative;
+		top:50px;
+		left:100px;
+	
+
+}
+.q2{
+		position:absolute;
+		top:80px;
+		left:800px;
+
+
+}
+.q3{
+
+		position:absolute;
+		top:120px;
+		left:470px;
+
+
+}

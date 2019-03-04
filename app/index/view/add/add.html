@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>
+            添加
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+<!--         <link rel="stylesheet" href="__STATIC__/admin/css/x-admin.css" media="all"> -->
+    </head>
+	<script>
+	function myCheck()
+            {
+               for(var i=0;i<document.form.elements.length-1;i++)
+               {
+                  if(document.form.elements[i].value=="")
+                  {
+                     alert("信息没有填全！");
+                     document.form.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}
+	</script>
+	<style>
+	.a1{
+		position:absolute;
+		font-family: 幼圆;
+		top:50px;
+		left:30px;
+		font-size:20px;
+
+	
+	
+	}
+	.a2{
+	
+	position:absolute;
+		font-family: 幼圆;
+		left:500px;
+		top:50px;
+		font-size:20px;
+
+	
+	}
+	.a4{
+	position:absolute;
+	top:250px;
+	left: 6%;
+	
+	}
+	.a5{
+		position:absolute;
+	top:320px;
+	left:46%;
+	
+	
+	}
+	.s_btn {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 20px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			input{
+			border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+			}
+			select{
+			border: 1px cadetblue solid;
+background: #f9f9f9;
+border-radius: 6px 6px 6px 6px;
+box-sizing: border-box;
+width: 150px;
+height: 26px;
+font-size: 14px;
+			}
+
+      .input_newstyle{
+          border: 1px cadetblue solid;
+          background: #f9f9f9;
+          border-radius: 6px 6px 6px 6px;
+          box-sizing: border-box;
+          width: 20px;
+          height: 20px;
+          font-size: 14px;
+      }
+	</style>
+    
+    <body>
+  <form class="layui-form" method="post" action="{:url('add/tianjiaq')}?id={$xh}"  name='form' onSubmit="return myCheck()">
+
+<div class='a1'>
+姓名：{$xm}<br><br>
+ 事件:<input type="text" name="shijian" placeholder="填写加分原因"><br><br>
+ 选择考评学年：<select name="year">
+                              <option value ="2018">2018-2019学年</option>
+                              <option value ="2019">2019-2019学年</option>
+                              <option value ="2020">2020-2019学年</option>
+                              <option value ="2021">2021-2019学年</option>
+                              <option value ="2022">2022-2019学年</option>
+                              <option value ="2023">2023-2019学年</option>
+                              <option value ="2024">2024-2019学年</option>
+                              <option value ="2025">2025-2019学年</option>
+                       </select><br><br>
+					   选择考评月份：<select name="yue">
+                              <option value ="1">1月</option>
+                              <option value ="3">3月</option>
+                              <option value ="4">4月</option>
+                              <option value ="5">5月</option>
+                              <option value ="6">6月</option>
+                              <option value ="7">7月</option>
+                              <option value ="9">9月</option>
+                              <option value ="10">10月</option>
+                              <option value ="11">11月</option>
+                              <option value ="12">12月</option>
+                       </select><br><br>
+</div>
+<div class='a2'>
+ 学号：{$xh}<br><br>
+ 分数:
+                        <input type="text" name="fen" placeholder="填写分数" ><br><br>
+						 选择考评学期：<select name="xq">
+                              <option value ="1">第一学期</option>
+                              <option value="2">第二学期</option>
+                        </select><br><br>
+						  选择三级指标：<select name="san">
+                              <option value ="2">学习态度</option>
+                              <option value="3">卫生习惯</option>
+                              <option value="4">生活态度</option>
+                              <option value="5">学习成绩</option>
+                              <option value ="6">体质健康状况</option>
+                              <option value="7">阳光体育运动</option>
+                              <option value="8">校园文化活动</option>
+                              <option value ="9">文化艺术竞赛视频</option>
+                              <option value ="10">发表文艺新闻作品</option>
+                              <option value="11">社会实践</option>
+                              <option value="12">志愿服务</option>
+                              <option value ="13">创新创业</option>
+                              <option value ="14">学科竞赛</option>
+                              <option value="15">学术著作</option>
+                              <option value="16">实践技能</option>
+                              <option value="17">任职情况</option>
+                              <option value="18">政治素质</option>
+                              <option value="19">道德素质</option>
+                              <option value="20">法纪观念</option>
+                              <option value="1">集体观念</option>
+                              <option value="21">诚信意识</option>
+                              <option value="22">安全意识</option>
+                              <option value="23">文明修养</option>
+                        </select><br><br>
+ </div>
+
+    <div class='a4'>
+      <input class="input_newstyle" type="checkbox" value="0.5" name="a" />政治素质
+      <input class="input_newstyle" type="checkbox" value="0.5" name="b" /> 道德素质
+      <input class="input_newstyle" type="checkbox" value="0.5" name="c" />法纪观念
+      <input class="input_newstyle" type="checkbox" value="0.5" name="d" />集体观念 
+      <input class="input_newstyle" type="checkbox" value="0.5" name="e" />诚信意识
+      <input class="input_newstyle" type="checkbox" value="0.5" name="f" />安全意识
+      <input class="input_newstyle" type="checkbox" value="0.5" name="g" />文明修养
+    </div>
+<div class='a5'>
+                        
+                    <br><br><button   type="submit"  class='s_btn'>
+                        保存
+                    </button>
+                </div>
+            </form>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>添加图片</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/add_pic.css'/>
+  <script type='text/javascript' src='__STATIC__/phone/js/add_pic.js'/></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+   <div id='first'></div>
+   <a id='a_first' href='{:url('index/index')}'>＜&nbsp;&nbsp;首页</a><br/><br/>
+
+   <div id='div_main'><!--主盒子-->
+	<center>
+    <form method="POST" enctype="multipart/form-data" action="{:url('index/loadimg')}" >
+		<div id='div_up'>
+			<div id='Add_Pic'>上传图片</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+
+	<div id='div_img'>
+		<img id="image" src=""/>
+		<!--添加图片的小框-->
+		<div id='div_j' class='div_x' type=''>
+    <a href="javascript:;" class="div_addPic" onclick='addpic()'> 
+  +
+  <input type="file" onchange="selectImage(this);" title="支持jpg、jpeg、gif、png格式，文件小于2M" name="file" class="file_Prew">
+	</a>
+  </div>
+<!--添加图片的小框结束-->
+	<div id='div_addpic'>点击添加图片</div>
+	</div>
+
+		</div>
+
+	<!--对button的设置-->
+  <center>
+  <input type='submit' value='确&nbsp;&nbsp;&nbsp;&nbsp认' id='input_button'>
+  请将照片压缩后上传，过大可能导致上传失败！
+  </center>
+</form>
+		<div id='footer'>
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+	</center>
+   </div><!--主盒子结束-->
+ </body>
+</html>

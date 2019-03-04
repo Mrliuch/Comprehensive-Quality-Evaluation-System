@@ -1,0 +1,113 @@
+#d1{
+	overflow: hidden;
+	height:80px;
+	width:100%;
+	box-shadow: 0px 3px 5px #DEDEDE;
+	position:absolute;
+	left:0;
+	top:0;
+	background-color:white;
+}
+#if1{
+	position:absolute;
+	left:0;
+	top:85px;
+}
+#text{
+	border:1px solid;
+	border-color:gray;
+	width:170px;
+	height:22px;
+	border-radius:22px;
+	position: absolute;
+	left:1052px;
+	top:27px;
+}
+.button:hover
+{ 
+	background-color:black;
+	color:white;
+}
+.button{
+	border:none;
+	background-color:white;
+	width:116px;
+	height:34px;
+	border-radius:3px;
+	font-size:20px;
+}
+#ksr{
+	background-color:white;
+	border:none;
+	width:180px;
+	height:34px;
+	font-size:20px;
+	position:absolute;
+	left:6px;
+	top:120px;
+}
+#d1_1{
+	background-color:white;
+	border:none;
+	width:180px;
+	height:34px;
+	font-size:20px;
+	position:absolute;
+	left:6px;
+	top:120px;
+
+
+}
+#b0{
+	position: absolute;
+	left:287px;
+	top:23px;
+}
+#b1{
+	position: absolute;
+	left:426px;
+	top:23px;
+}
+#b2{
+	position: absolute;
+	left:586px;
+	top:23px;
+}
+#b3{
+	position: absolute;
+	left:761px;
+	top:23px;
+}
+
+#b4{
+	position: absolute;
+	left:1250px;
+	top:23px;
+}
+ .a2{
+	    box-shadow: 0 5px 6px rgba(100, 100, 100, 0.8);
+		font-family:свт╡;
+	    position: absolute;
+        left: 4%;
+        top: 120px;
+		width:1290px;
+		height:180px;
+		background-color:#ffffff;
+  
+  }
+  .a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+	top:8px;
+  
+  }
+  .a6{
+	position:relative;
+
+  
+  }

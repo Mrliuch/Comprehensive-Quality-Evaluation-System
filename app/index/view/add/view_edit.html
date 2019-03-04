@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>
+            编辑
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="__STATIC__/admin/css/x-admin.css" media="all">
+    </head>
+    <style>
+.a1{
+	position:absolute;
+	top:30px;
+	left:50px;
+		font-family: 幼圆;
+		font-size:20px;
+}
+.a2{
+	position:absolute;
+	top:30px;
+	left:500px;
+		font-family: 幼圆;
+		font-size:20px;
+
+
+}
+.s_btn {
+				background: #0cab73;
+				font-family:幼圆;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 20px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 90px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.a3{
+			
+				position:absolute;
+	top:300px;
+	left:45%;
+		font-family: 幼圆;
+		font-size:20px;
+			
+			}
+
+	</style>
+    <body>
+	 <form class="layui-form" method="post" action="{:url('add/genggai')}?id={$aa.perform_id}">
+<div class='a1'>
+ 姓名:{$xm}</br><br>
+  考评月份：{$aa.date}</br><br>
+  事件:<input type="text" name="shijian"value="{$aa.activity}" ></br><br>
+
+</div>
+
+<div class='a2'>
+学号:{$xh}</br><br>
+ 考评年份：{$aa.year}</br><br>
+分数:<input type="text" name="fen" value="{$aa.grade}" ><br><br>
+</div>
+
+<div class='a3'>
+
+<button   type="submit" class='s_btn'>
+                        保存
+                    </button>
+</div>
+
+
+</form>    
+
+
+            </form>    
+    </body>
+</html>

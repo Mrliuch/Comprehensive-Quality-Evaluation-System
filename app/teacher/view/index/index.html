@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/shouye.css"/>
+  <script type="text/javascript" src='__STATIC__/admin/js/shouye.js'></script>
+  <script>
+    {$aaa}
+  </script>
+  </head>
+  <body  style="background-color:#EDEDED;">
+ <div>
+ 	<div id="d1">
+    <img src='__STATIC__/admin/images/第一种.png' style="  position:absolute;
+  width:200px;
+  height:50px;
+  top:15px;
+  left:40px;">
+  <button id="ksr"><b>信 息 技 术 学 院 考 评 管 理 系 统</b></button>
+  <button onclick='getVal0()' id='b0' class='button'>全 局 设 置</button>
+  <button onclick='getVal1()' id='b1' class='button'>名 单 管 理</button>
+  <button onclick='getVal2()' id='b2' class='button'>查 看 成 绩</button>
+  <button onclick='getVal3()' id='b3' class='button'>发 布 通 知</button>
+ <!--  <input type="text" placeholder="" id='text'/> -->
+  <a href="{:url('login/logout')}"><button  id='b4' class='button'>注 销</button></a>
+</div>
+
+<br/>
+ </div>
+ <iframe src="{:url('index/welcome')}"  width="100%" height="880px" frameborder="0" id='if1' ></iframe>
+</body> 
+  </html>

@@ -1,0 +1,70 @@
+.nav{
+    width:96%;
+    height:82px;
+    margin:26px auto;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 3px 5px #DEDEDE;
+}
+
+.two_nav{
+    width: 1230px;
+    height: 75px;
+    margin:0 auto;
+    text-align: right;
+}
+.tn{
+    background-color: #19966A;
+    border: none;
+    color: #FFFFFF;
+    padding: 3px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+<!--表格样式-->
+    .Tab {
+        border-collapse: separate;
+        width: 1228px;
+        height: 212px;
+        text-align: center;
+        border-radius: 10px 15px 20px 30px;
+    }
+
+.Tab td{
+    border-right: 1px solid  #19966A;
+    border-bottom: 1px solid  #19966A;
+
+}
+
+.t1{
+    height: 50px;
+}
+.t2 {
+    height: 162px;
+}
+.td1{
+    height: 52px;
+    border-bottom: 0px;
+}
+
+<!--我要确认-->
+    .tn{
+        padding: 90px;
+
+    }
+.last {
+    margin: 90px 0 0 0 ;
+    float: contour;
+}
+.last>.tn{
+    margin-left: 178px;
+    margin-right: 178px;
+    margin-bottom: 116px;
+}

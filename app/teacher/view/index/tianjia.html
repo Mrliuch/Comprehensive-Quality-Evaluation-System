@@ -1,0 +1,289 @@
+<!doctype html>
+<!-- 添加考评 -->
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus?">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/tea2.css"/>
+  <title>Document</title>
+ </head>
+ <body >
+<script>
+		   function myCheck()
+            {
+               for(var i=0;i<document.form.elements.length-1;i++)
+               {
+                  if(document.form.elements[i].value=="")
+                  {
+                     alert("还有信息没有填入！");
+                     document.form.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}   
+	
+</script>
+<style>
+.a21{
+	    box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+		font-family:幼圆;
+		position: relative;
+		margin: 0 auto;
+        top: 35px;
+		width:74%;
+		height:180px;
+		background-color:#ffffff;
+  
+  }
+
+  .b4{
+				 	position: absolute;
+					top:850px;
+					left:43%;
+				 text-decoration:none;
+				 color: #808080;
+				 font-family:幼圆;
+			
+			}
+	.b1{
+	    box-shadow: 0 3px 3px rgba(100, 100, 100, 0.3);
+		font-family:幼圆;
+	    position: relative;
+		margin: 0 auto;
+        top: 58px;
+		left:0;
+		width:74%;
+		height:180px;
+		background-color:#ffffff;
+  
+  }
+  .b5{
+			
+			    box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+		font-family:幼圆;
+	    position: relative;
+        top: 205px;
+		width:74%;
+		height:180px;
+		left:45px;
+		background-color:#ffffff;
+
+			}
+			.a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+.a21{
+
+border-radius: 5px 5px 5px 5px;
+}
+	.s_btn {
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+
+			}
+			.b1{
+			border-radius: 5px 5px 5px 5px;
+			}
+			.b3{
+
+			border-radius: 5px 5px 5px 5px;
+			width:90%;
+			}
+			.b2{
+			border-radius: 5px 5px 5px 5px;
+			 width:100%;
+			 box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+			}
+			.b5{
+
+			border-radius: 5px 5px 5px 5px;
+			width:74%;
+			left: 13%;
+				top: 282px;
+			}
+	.c3{
+		border: 1px cadetblue solid;
+		background: #f9f9f9;
+		border-radius: 6px 6px 6px 6px;
+		box-sizing: border-box;
+		width: 140px;
+		height: 26px;
+		font-size: 14px;
+		color: #bababa;
+	}
+	.select_style{
+		border: 1px cadetblue solid;
+		background: #f9f9f9;
+		border-radius: 6px 6px 6px 6px;
+		box-sizing: border-box;
+		width: 140px;
+		height: 26px;
+		font-size: 14px;
+		color: #bababa;
+	}
+	.c4 {
+		top: 74px;
+		left: 27%;
+	}
+	.c6{
+		left: 83%;
+		top: 94px;
+	}
+
+</style>
+
+
+ <div>
+     <div class='a21'>
+		<div class='a3'><strong>上 传 新 名 单</strong></div></br>
+		<div class='a4'><hr></div>
+		<div class='a5'></div>
+		<div class='a6'>
+
+			 <a href="__STATIC__/muban/yang.xlsx">
+			 	<button class="but_style" href="__STATIC__/muban/yang.xlsx" 
+			 			style="text-decoration: none;
+			 					background: #0cab73;
+			 					font-family: 幼圆;
+								border-radius: 6px 6px 6px 6px;
+								color: #fff;cursor: pointer;
+								font-size: 15px;height: 33px;
+								letter-spacing: 1px;
+								outline: none;
+								vertical-align: top;
+								width: 120px;
+								border:none;
+								position: absolute;
+								left: 83%;
+								top:20px">
+												点击下载样表
+			 </button>
+
+			</a>
+
+<form action="{:url('add/load')}" method="post" enctype="multipart/form-data">
+
+			<div class='a7'><a href="javascript:;" class="a-upload mr10"><input type="file" name="file" id="">上传新名单</a></div>
+			</div>
+		 <div class='a8'>
+
+
+				</br>
+				</br>
+			 <input type="submit" tabindex="3" id="su" value="提     交" class="s_btn"/>
+		 </div>
+	 </div>
+</div>
+</form>
+
+
+<form action="{:url('add/mingdan')}" method="post">
+		<div class='b1'>
+					  <div class='a3'><strong>查 看 年 级 名 单</strong>
+					  </div></br>
+
+					<div class='a4'><hr>
+					</div>
+
+					<div class='a5'>
+
+					</div>
+
+					<div class='a12'>
+						输入学院年级
+					</div>
+
+					<div class='a14'>
+						<input type="text" name="nj" placeholder="输入学号前几位" class='a15'>
+					</div>
+
+					<div class='a81'><input type="submit" tabindex="3" id="su" value="查     询" class="s_btn">
+					</div>
+</form>
+
+
+
+<form action="{:url('add/mingdan')}" method="post">
+<div class='b2'>
+					<div class='a3'>
+						单 人 修 改
+					</div></br>
+
+					<div class='a4'>
+						<hr>
+					</div>
+
+					<div class='a18'>
+						输入学号
+					</div>
+
+					<div class='a16'>
+						<input type="text" name="xh" placeholder="例：12165108" class='a15'>
+						</br>
+					</div>
+
+					<div class='a17'>
+						输入姓名
+					</div>
+
+					<div class='a17_1'>
+					<input type="text" name="xm" placeholder="例：刘晨" class='a15'/>
+					</div>
+
+					<div class='a82'>
+						<input type="submit"  value="查     询" class="s_btn">
+							</br></br>
+						<input type="submit"  value="查     询" class="s_btn">
+					</div>
+
+	</div>
+					</div>
+</form>
+
+<form action="{:url('add/add')}" method="post" onSubmit="return myCheck()" name='form'>
+<div class='b5'>
+	<div class='c1'><strong>单 人 添 加</strong></div></br><hr>	
+	<div class='c2'>
+	学号：<input type="text" name="xh" placeholder="请输入正确学号" class='c3'>
+	</br></br>
+	姓名：<input type="text" name="xm" placeholder="请输入正确姓名" class='c3'>
+	</div>
+
+	<div class='c4'>
+	性别：<select name="xb" id="" class="select_style">
+			  <option value="男">男</option>
+			  <option value="女">女</option>
+			</select></br></br>
+		电话：<input type="text" name="phone" placeholder="请输入正确电话" class='c3'>
+	</div>
+	<div class='c5' style="left: 50%">
+	民&nbsp;&nbsp;&nbsp;&nbsp;族：<input type="text" name="mz" placeholder="请输入民族" class='c3'></br></br>
+	政治面貌：<select name="zz" id="" class="select_style">
+  <option value="共青团员">共青团员</option>
+  <option value="群众">群众</option>
+  <option value="党员">党员</option>
+</select>
+	</div>
+	<div class='c6'>
+			<input type="submit"  value="添 加" class="s_btn">
+	</div>
+</div>
+</form>
+
+
+
+<div class='b4' style="margin-bottom: 50px; margin-top: 80px">
+<a href='#'style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>
+</div>
+ </body>
+</html>

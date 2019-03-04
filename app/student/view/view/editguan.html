@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>
+            编辑
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="__STATIC__/admin/css/x-admin.css" media="all">
+    </head>
+    
+    <body>
+        <div class="x-body">
+            <form class="layui-form" method="post" action="{:url("index/view/editgai")}?id={$aa['perform_id']}">
+
+         
+<table align='center' width="100%">
+                              <?php 
+                         use app\admin\model\Student;
+                         $student = new Student; 
+                         $id = $aa['number'];
+                         $name = $student ->where('student_id',$id) ->find();
+                         $sname = $name['student_name'];
+          ?>
+                 
+                 <tr height='50px' align='center'><td width='30%'  >姓名</td><td align='left' >{$sname} </td><td width="50%"></td></tr>
+                 <tr height='50px' align='center'><td>学号</td><td align='left'>{$aa['number']}</td> </tr>
+<tr height='50px' align='center'><td>上传时间</td><td align='left'>
+          <?php 
+            $data = date('Y-m-d H:i:s',$aa['abc']);
+                    echo $data.'</td> </tr>';?>
+                        <tr height='50px' align='center'><td>事件</td><td>
+                        <input width='40%' type="text" id="L_email" name="activity" required="" lay-verify="email" value="{$aa['activity']}" 
+                        autocomplete="off" class="layui-input"></td> </tr>
+                                                <tr height='50px' align='center'><td>分数</td><td>
+                        <input width='40%' type="text" id="L_email" name="grade" required="" lay-verify="email" value="{$aa['grade']}" 
+                        autocomplete="off" class="layui-input"></td> </tr>
+
+                    
+</table><button   type="submit" >
+                        保存
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+    </body>
+
+</html>

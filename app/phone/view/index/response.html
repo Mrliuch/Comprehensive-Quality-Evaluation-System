@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>反馈申请</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/response.css'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+ <div id='first'></div>
+ <a id='a_first' href="{:url('index/index')}">＜&nbsp;&nbsp;首页</a><br/><br/>
+  <div id='div_main'><!--主盒子-->
+    <a href="{:url('index/chuli')}"><div id='button_div'><button class='button_first' id='button_first1'  style="width: 100px">反&nbsp;馈&nbsp;状&nbsp;态</button></a>&nbsp;&nbsp;&nbsp;
+	<a href="__STATIC__/muban/page/index.html"><button class='button_first'id='button_first2'  style="width: 100px">综合测评方法</button></a>
+	</div>
+	<center>
+	<form name='form1' onSubmit="return _submit('1')" action="{:url('index/fankuia')}" method="post"><!--第一个表单-->
+	<div id='div_up'>
+	  <div id='div_wrong'>错误反馈</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+	  <div class='div_left'>事件名称:</div>
+	  <input class='input_right' name="sj" placeholder="填写要反馈的事件名称"/>
+	  <div class='div_left'>应加分数:</div>
+	  <input class='input_right' id='input_right2' name="fen" placeholder="请对照综合素质测评方法填写"/>
+	  <div class='div_left'>原因描述:</div>
+	  <input class='input_right' onclick='ww("1")' name="yuanyin" placeholder="请详细填写原因，以便我们核实" />
+	  <div class='div_left'>三级指标:</div>
+			<select name="zhibiao" class="input_right" >
+                  <option value ="学习态度">学习态度</option>
+                  <option value="卫生习惯">卫生习惯</option>
+                  <option value="生活态度">生活态度</option>
+                  <option value="学习成绩">学习成绩</option>
+                  <option value ="体质健康状况">体质健康状况</option>
+                  <option value="阳光体育运动">阳光体育运动</option>
+                  <option value="校园文化活动">校园文化活动</option>
+                  <option value ="文化艺术竞赛视频">文化艺术竞赛视频</option>
+                  <option value ="发表文艺新闻作品">发表文艺新闻作品</option>
+                  <option value="社会实践">社会实践</option>
+                  <option value="志愿服务">志愿服务</option>
+                  <option value ="创新创业">创新创业</option>
+                  <option value ="学科竞赛">学科竞赛</option>
+                  <option value="学术著作">学术著作</option>
+                  <option value="实践技能">实践技能</option>
+                  <option value="任职情况">任职情况</option>
+                  <option value="政治素质">政治素质</option>
+                  <option value="道德素质">道德素质</option>
+                  <option value="法纪观念">法纪观念</option>
+                  <option value="集体观念">集体观念</option>
+                  <option value="诚信意识">诚信意识</option>
+                  <option value="安全意识">安全意识</option>
+                  <option value="文明修养">文明修养</option>
+            </select>
+
+
+
+	  <div class='div_left'>联系电话:</div>
+	  <input type="hidden" name="status" value="0" >
+	  <input class='input_right' id='input_right5' name="phone" placeholder="请正确填写，以便联系到您" /><br/>
+	<button id='button_submit' onclick='ww("2")'>提交</button>
+	</div>
+	</form>
+		<form name='form2' onSubmit="return _submit('2')" action="{:url('index/fankuia')}" method="post"><!--第二个表单-->
+	  <div id='div_down'>
+	  <div id='div_wrong'>申请加分</div>
+	  <hr id='hr_lineup' color='#F0F0F0' size='2px'/>
+	  <div class='div_left'>事件名称:</div>
+	  <input class='input_right' name="sj" placeholder="请简要清楚填写事件名称"/>
+	  <div class='div_left'>应加分数:</div>
+	  <input class='input_right' name="fen"  id='input_right21' placeholder="详看考核详单"/>
+	  <div class='div_left'>原因描述:</div>
+	  <input class='input_right' onclick='www("1")' name="yuanyin" placeholder="请详细填写原因，如时间地点，以便我们核实" />
+	  <div class='div_left'>三级指标:</div>
+			<select name="zhibiao" class="input_right" >
+                  <option value ="学习态度">学习态度</option>
+                  <option value="卫生习惯">卫生习惯</option>
+                  <option value="生活态度">生活态度</option>
+                  <option value="学习成绩">学习成绩</option>
+                  <option value ="体质健康状况">体质健康状况</option>
+                  <option value="阳光体育运动">阳光体育运动</option>
+                  <option value="校园文化活动">校园文化活动</option>
+                  <option value ="文化艺术竞赛视频">文化艺术竞赛视频</option>
+                  <option value ="发表文艺新闻作品">发表文艺新闻作品</option>
+                  <option value="社会实践">社会实践</option>
+                  <option value="志愿服务">志愿服务</option>
+                  <option value ="创新创业">创新创业</option>
+                  <option value ="学科竞赛">学科竞赛</option>
+                  <option value="学术著作">学术著作</option>
+                  <option value="实践技能">实践技能</option>
+                  <option value="任职情况">任职情况</option>
+                  <option value="政治素质">政治素质</option>
+                  <option value="道德素质">道德素质</option>
+                  <option value="法纪观念">法纪观念</option>
+                  <option value="集体观念">集体观念</option>
+                  <option value="诚信意识">诚信意识</option>
+                  <option value="安全意识">安全意识</option>
+                  <option value="文明修养">文明修养</option>
+            </select>
+	  <div class='div_left'>联系电话:</div>
+	  <input class='input_right' name="phone"  id='input_right51' placeholder="请正确填写，以便联系到您"/><br/>
+	  <input type="hidden" name="status" value="1">
+	<button id='button_submit' onclick='www("2")'>提交</button>
+	</div>
+	     </form>
+	<div id='footer' style="font-size:11px;margin-top:20%;">
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+	</center>
+  </div>
+ </body>
+</html>
+
+<script type='text/javascript' language='JavaScipt'>
+
+	function _submit(n){
+        if(n==1){
+			for(var i=0;i<document.form1.elements.length-1;i++)
+			 {
+				if(document.form1.elements[i].value=="")
+				{
+					   alert("哦哦，还有空格没填呢！");
+					   document.form1.elements[i].focus();
+					   return false;
+						 }
+						}
+			 return true;
+				 }
+      if(n==2){
+			  for(var i=0;i<document.form2.elements.length-1;i++)
+				{
+				 if(document.form2.elements[i].value=="")
+				 {
+				   alert("哦哦，还有空格没填呢！");
+				   document.form2.elements[i].focus();
+				   return false;
+				 }
+					}
+					return true;
+				  }
+			}
+
+			function ww(m){
+			   var text2=document.getElementById('input_right2').value;
+			   var text5=document.getElementById('input_right5').value;
+			   var reg1=/\d/;
+			   var reg2=/\d{11}/;
+				if((!reg1.test(text2))&&(m==1)){
+				  alert("请输入合法数字的分数！");
+				}
+				if(!reg2.test(text5)&&(m==2)){
+				  alert("请输入11位电话号码！");
+				}
+			}
+			function www(m){
+			   var text2=document.getElementById('input_right21').value;
+			   var text5=document.getElementById('input_right51').value;
+			   var reg1=/\d/;
+			   var reg2=/\d{11}/;
+				if((!reg1.test(text2))&&(m==1)){
+				  alert("请输入合法数字的分数！");
+				}
+				if(!reg2.test(text5)&&(m==2)){
+				  alert("请输入11位电话号码！");
+				}
+			}
+  </script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反馈</title>
+
+ <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/fk.css"/>
+ <script type="text/javascript" src="__STATIC__/admin/js/fankui.js"></script>
+<head>
+<script>
+        function clfk()
+  {
+    window.location.href="{:url('index/chulii')}";
+  }
+  		function khbf()
+		{
+			
+    window.location.href='__STATIC__/muban/信息技术学院综合素质测评方法.pdf';
+		}
+		   function myCheck()
+            {
+               for(var i=0;i<document.form1.elements.length-1;i++)
+               {
+                  if(document.form1.elements[i].value=="")
+                  {
+                     alert("喂喂喂！还有地方没填呢");
+                     document.form1.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}   
+function myCheck1()
+            {
+               for(var i=0;i<document.form2.elements.length-1;i++)
+               {
+                  if(document.form2.elements[i].value=="")
+                  {
+                     alert("想加分？先把信息填全啦！");
+                     document.form2.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+              
+
+}
+</script>
+<style>
+	.s_btn{
+			width:100px;
+			font-size: 16px;
+			padding-top: 0px;
+			
+	
+	}
+				.s_btn1 {
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+
+			}
+			.a1{
+				left:1018px;
+				top:30px;;
+			}
+			.a2{
+			
+			border-radius: 5px 5px 5px 5px;
+			width:75%;
+			
+			}
+			.a21{
+			
+			border-radius: 5px 5px 5px 5px;
+			width:75%;
+			}
+			.b4{
+		position:absolute;
+		top:850px;
+		left:42%;
+		width:50%;
+}
+			
+		
+	.input_style{
+		width: 120px;
+	    height: 26px;
+	    color: #bababa;
+	    font-size: 14px;
+	    border: 1px cadetblue solid;
+	    line-height: 35px;
+	    padding-left: 10px;
+	    background: #f9f9f9;
+	    border-radius: 6px 6px 6px 6px;
+	}	
+
+	.c2{
+		position: absolute;;
+		left: 60%;
+	}
+	.c3{
+		position: absolute;;
+		left: 43%;
+	}	
+	.a2 {
+		box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+	}
+	.a21{
+		box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+	}
+	}
+</style>
+
+
+
+
+<body>
+<div class='a1'>
+	<input type='button' value='反馈状态'  onclick='clfk()' class='s_btn'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type='button' value='考核详单'  onclick='khbf()' class='s_btn'>
+
+</div>
+
+<form action="{:url('index/fankuia')}" method="post" name='form1' onSubmit="return myCheck()">
+<div class='a2'>
+		<div class='a3'>错误反馈</div></br>
+		<div class='a4'><hr></div>
+		<div class='c1'style = "top: 90px">
+			<font size='3px'>事件名称：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="sj" placeholder="详填（时间事件）"><br><br>
+			<font size='3px'>应加分数：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="fen" placeholder="详看考核详单"><br><br>
+			<font size='3px'>错误原因：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="yuanyin" placeholder="详填"><br><br>
+		</div>
+		<div class='c2' style = "top: 90px">
+				<font size='3px'>三级指标：</font>
+						<select name="zhibiao" class="input_style" style="width: 134px;height: 31px">
+                              <option value ="学习态度">学习态度</option>
+                              <option value="卫生习惯">卫生习惯</option>
+                              <option value="生活态度">生活态度</option>
+                              <option value="学习成绩">学习成绩</option>
+                              <option value ="体质健康状况">体质健康状况</option>
+                              <option value="阳光体育运动">阳光体育运动</option>
+                              <option value="校园文化活动">校园文化活动</option>
+                              <option value ="文化艺术竞赛视频">文化艺术竞赛视频</option>
+                              <option value ="发表文艺新闻作品">发表文艺新闻作品</option>
+                              <option value="社会实践">社会实践</option>
+                              <option value="志愿服务">志愿服务</option>
+                              <option value ="创新创业">创新创业</option>
+                              <option value ="学科竞赛">学科竞赛</option>
+                              <option value="学术著作">学术著作</option>
+                              <option value="实践技能">实践技能</option>
+                              <option value="任职情况">任职情况</option>
+                              <option value="政治素质">政治素质</option>
+                              <option value="道德素质">道德素质</option>
+                              <option value="法纪观念">法纪观念</option>
+                              <option value="集体观念">集体观念</option>
+                              <option value="诚信意识">诚信意识</option>
+                              <option value="安全意识">安全意识</option>
+                              <option value="文明修养">文明修养</option>
+                        </select>
+				<br><br>
+				<font size='3px'>联系电话：&nbsp;</strong></font>
+					<input class="input_style" type="text" name="phone" placeholder="请真实填写"><br><br>
+		</div>
+		<div class='c3' >
+				<input type="hidden" name="status" value="0">
+				<input type="submit" value="提 交" class='s_btn1'>
+				</form>
+		</div>
+</div>
+
+
+<div class='a21'>
+<form action="{:url('index/fankuia')}" method="post" name='form2' onSubmit="return myCheck1()">
+		<div class='a3'>申请加分</div></br>
+		<div class='a4'><hr></div>
+		<div class='c1'>
+			<font size='3px'>事件名称：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="sj" placeholder="详填（时间事件）"><br><br>
+			<font size='3px'>应加分数：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="fen" placeholder="详看考核详单"><br><br>
+			<font size='3px'>错误原因：&nbsp;</strong></font>
+				<input class="input_style" type="text" name="yuanyin" placeholder="详填" ><br><br>
+		</div>
+		<div class='c2'>
+				<font size='3px'>三级指标：
+						<select name="zhibiao" class="input_style" style="width: 134px;height: 31px">
+                              <option value ="学习态度">学习态度</option>
+                              <option value="卫生习惯">卫生习惯</option>
+                              <option value="生活态度">生活态度</option>
+                              <option value="学习成绩">学习成绩</option>
+                              <option value ="体质健康状况">体质健康状况</option>
+                              <option value="阳光体育运动">阳光体育运动</option>
+                              <option value="校园文化活动">校园文化活动</option>
+                              <option value ="文化艺术竞赛视频">文化艺术竞赛视频</option>
+                              <option value ="发表文艺新闻作品">发表文艺新闻作品</option>
+                              <option value="社会实践">社会实践</option>
+                              <option value="志愿服务">志愿服务</option>
+                              <option value ="创新创业">创新创业</option>
+                              <option value ="学科竞赛">学科竞赛</option>
+                              <option value="学术著作">学术著作</option>
+                              <option value="实践技能">实践技能</option>
+                              <option value="任职情况">任职情况</option>
+                              <option value="政治素质">政治素质</option>
+                              <option value="道德素质">道德素质</option>
+                              <option value="法纪观念">法纪观念</option>
+                              <option value="集体观念">集体观念</option>
+                              <option value="诚信意识">诚信意识</option>
+                              <option value="安全意识">安全意识</option>
+                              <option value="文明修养">文明修养</option>
+                        </select>
+<br><br>
+				<font size='3px'>联系电话：&nbsp;</strong></font>
+					<input class="input_style" type="text" name="phone" placeholder="请真实填写"><br><br>
+		</div>
+		<div class='c3'>
+				<input type="hidden" name="status" value="1">
+				<input type="submit" value="提 交" class='s_btn1'>
+				</form>
+		</div>
+</div>
+	 <div class='b4' style="margin-bottom: 20px">
+		<a href=''style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>|<a href="{:url('first/index/develop')}" style='text-decoration:none;'>提出建议</a>
+		</div>
+</body> 
+  </html>

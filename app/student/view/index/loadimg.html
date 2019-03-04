@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传图片</title>
+	<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/loading.css"/>
+	<script>
+  		function fh()
+		{
+			
+    window.location.href='{:url('index')}';
+		}
+
+		pt
+	</script>
+<style>
+
+.a7{
+	top:100px;
+	left:460px;
+
+}	
+.a8{
+		top:60px;
+
+
+
+}
+.a2{
+
+	width:70%;
+	left:16%;
+
+
+}
+.a6{
+	position:relative;
+
+
+}
+.a8{
+
+	left:80%;
+}
+
+</style>
+</head>
+<form method="POST" enctype="multipart/form-data" action="{:url('index/loadimg')}">
+<body>
+<center><h1>反馈成功，请上传照片！</h1></center>
+<div class='a2'>
+		<div class='a3'><strong>反馈提交</strong></div></br>
+		<div class='a4'><hr></div>
+		<div class='a6'>
+			<div class='a7'><a href="javascript:;" class="a-upload mr10"><input type="file" name="file" id="">选择图片</a></div>
+			</div>
+			<div class='a8'><input type="submit" tabindex="3" id="su" value="提交" class="s_btn">
+			<br/></br><br/></br>
+			<input type='button' class='s_btn' value='返回' onclick='fh()'>
+
+
+			</div>
+      </form>
+	 </div>
+</body>
+</html>

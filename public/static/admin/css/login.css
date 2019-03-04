@@ -1,0 +1,74 @@
+#linear{
+background-image: linear-gradient(90deg, #42EA84,#4CD2B1);
+}
+#signin{
+margin:209px auto;
+height:380px;
+width:450px;
+background-color:#ffffff;
+text-align:center;
+border-radius:8px;
+padding-top:36px;
+}
+#son{ 
+border:none;
+width:355px; 
+height:45px; 
+display:inline-block; /*显示div中div*/
+background-image: linear-gradient(90deg, #05C490,#06F3AB);
+text-align:center;
+line-height: 40px;/*当值与div高度一致时，div中文本垂直水平*/
+border-radius:5px;
+ margin:50px 0px 30px 0px;
+}
+#ding{
+font-family:Arial;
+font-size:30px;
+/*font-weight:bold;*/
+}
+#button{
+font-family:幼圆;
+font-size:25px;
+color:#fff;
+}
+#zh{
+	background-color:white;
+border:solid;
+border-radius:5px;
+border-color:#BBBBBB;
+border-width:1px;
+outline:none;
+padding:0 0 0 45px;
+font-size:20px;
+ background:url('../../../../public/static/admin/images/zhanghu.png');
+ /*opacity:0.4;*/
+ background-repeat: no-repeat;
+ background-position: 4% 50%; 
+ width:305px;
+ height:40px;
+ background-size: 20px;
+ margin:42px 0px 0px 0px;
+}
+#mm{
+border-radius:5px;
+border:solid;
+border-color:#BBBBBB;
+border-width:1px;
+outline:none;
+padding:0 0 0 45px;
+font-size:20px;
+ background:url('__STATIC__/admin/images/mima.png');
+ background-repeat: no-repeat;
+ background-position:4% 50%; 
+ width:305px;
+ height:40px;
+ background-size: 18px;
+ margin:27px 0px 0px 0px;
+}
+#thr{
+}
+#shr2{
+font-size:15px;	
+color:black;
+}
+a{text-decoration:none;} 

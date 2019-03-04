@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>首页</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/index.css'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  	{$aaa}
+  </script>
+  <script type="text/javascript">
+  	function ok(){
+ var r=confirm("请确认你的当月考评无误，如有问题请点击取消并反馈问题，如无请单击确认");
+if (r==true)
+{
+    window.location.href="{:url('student/index/stuok')}";
+}
+else
+{
+    window.location.href="{:url('index/fankui')}";
+}
+}
+  </script>
+ </head>
+ <body>
+ <center>
+    <img id='img_first' src='__STATIC__/phone/pictures/First.png' />
+	<div id='div_up'>
+	<a href=""><input value='本月考评' type='button' class='input_button' id='input_button1'/></a>
+	<a href="{:url('index/ckkp')}"><input value='查看成绩' type='button' class='input_button' id='input_button2'/></a>
+	<a href="{:url('index/fankui')}"><input value='反馈申请' type='button' class='input_button' id='input_button3'/></a>
+	<br/>
+	</div>
+	<form>
+		{volist name="aa" id="all"}
+	   <table id='table_form' cellspacing=0>
+	     <tr>
+		   <td class='td_left'>学号</td>
+		   <td colspan='2'>{$xh}</td>
+		 </tr>
+		 <tr>
+		   <td class='td_left'>姓名</td>
+		   <td colspan='2'>{$xm}</td>
+		 </tr>
+		 <tr>
+		   <td class='td_left'>类别</td>
+		   <td>加分</td>
+		   <td>减分</td>
+		 </tr>
+		 <tr>
+		   <td class='td_left'>{$v[0]['year']}年
+<?php
+    $a = count($v);
+    for($i=0;$i<$a;$i++){
+    echo $v[$i]['yue'].'  ';
+  }
+    ?>月<br><br>
+
+		   </td>
+		   <td>
+		   	{volist name="all" id="vo1"}
+		   	{gt name="vo1.grade" value="0"}
+		   	{$vo1.activity}&nbsp;&nbsp;{$vo1.grade}分<br>
+		   	{/gt}
+		   	{/volist}
+		   </td>
+		   <td>
+		   	{volist name="all" id="vo1"}
+		   	{lt name="vo1.grade" value="0"}
+		   	{$vo1.activity}&nbsp;&nbsp;{$vo1.grade}分<br>
+		   	{/lt}
+		   	{/volist}
+
+		   </td>
+		 </tr>
+	   </table><br>
+	   {/volist}
+
+
+	   <br><br><br><br>
+	   <a id='a_footer' style="text-decoration: none;font-size:22px;" href="{:url('index/fankui')}">
+	   		<span id='button_response' style="font-size:18px;padding:7px;">我要反馈</span>
+	   </a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a id='a_footer' style="text-decoration: none;font-size:22px;" onclick='ok()'>
+	   		<span id='button_response' style="font-size:18px;padding:7px;">确认无误</span>
+	   </a>
+
+	</form>
+	<div id='footer'>
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" style="font-size: 10px">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ </center>
+ </body>
+</html>

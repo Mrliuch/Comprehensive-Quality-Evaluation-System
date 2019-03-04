@@ -1,0 +1,42 @@
+#but1{
+	position:absolute;
+	left:1130px;
+	top:30px;
+}
+#but2{
+	position:absolute;
+	left:1222px;
+	top:30px;
+}
+.b_css1{
+	background-color:#19966A;
+	color:white;
+	width:70px;
+	height:28px;
+	border:none;
+	border-radius:3px;
+}
+#ding{
+	height:90px;
+	width:100%;
+}
+td{
+	text-align:center;
+}
+table{
+	min-height:200px;
+	border-radius:2px;
+	border:;
+}
+#te1{
+	width:681px;
+	min-height:110px;
+	background-color:gray;
+	display:block;word-break: break-all;word-wrap: break-word;/*实现div中文字自动换行*/
+}
+.fkt{
+	width:210px;
+	height:158px;
+	border-radius:5px;
+
+}

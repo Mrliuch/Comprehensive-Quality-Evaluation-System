@@ -1,0 +1,121 @@
+.a1{
+		position:absolute;
+		top:40px;
+		left:860px;
+	
+	
+	}
+	.s_btn {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 18px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 180px;
+			}
+			   .s_btn input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .s_btn:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.a2{
+		 box-shadow: 0 2px 3px rgba(100, 100, 100, 0.8);
+		font-family:свт╡;
+	    position: absolute;
+        left:190px;
+        top: 90px;
+		width:1060px;
+		height:300px;
+		background-color:#ffffff;
+}
+.a3{
+		position:absolute;
+		top:10px;
+		left:25px;
+  }
+
+  .a4{
+	position: relative;
+	top:8px;
+  
+  }
+  .c1{
+	position: absolute;
+	top:100px;
+	left:120px
+  
+  
+  }
+  .c2{
+  position: absolute;
+	top:100px;
+	left:620px
+	
+  
+  
+  }
+  .c3
+{
+	position: absolute;
+	top:250px;
+	left:480px
+	
+
+
+}
+.s_btn1 {
+				background: #0cab73;
+				font-family:свт╡;
+				border-radius: 6px 6px 6px 6px;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+				font-size: 18px;
+				height: 30px;
+				letter-spacing: 1px;
+				outline: none;
+				padding-top: 4px;
+				vertical-align: top;
+				width: 80px;
+			}
+			   .s_btn1 input{
+                position: absolute;
+                font-size: 100px;
+                filter: alpha(opacity=0);
+                cursor: pointer
+            }
+            .s_btn1:hover{
+                color: #FFFFFF;
+                background: #337ab7;
+                border-color: #204d74;
+                text-decoration: none;
+            }
+			.a21{
+			
+					 box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+		font-family:свт╡;
+	    position: absolute;
+        left:190px;
+        top: 420px;
+		width:1060px;
+		height:300px;
+		background-color:#ffffff;
+			
+			
+			
+			
+			}

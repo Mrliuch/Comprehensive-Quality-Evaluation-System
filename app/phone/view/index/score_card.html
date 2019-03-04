@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>综合素质测评成绩单</title>
+  <link rel='stylesheet' type='text/css' href='__STATIC__/phone/css/score_card.css' />
+
+	<link href="__STATIC__/phone/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="__STATIC__/phone/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="__STATIC__/phone/css/animate.css" rel="stylesheet">
+    <link href="__STATIC__/phone/css/style.css?v=4.1.0" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jspdf/1.4.1/jspdf.debug.js"></script>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+
+<style type="text/css">
+  .t1{
+    width: 26%;
+  }
+  .t2{
+    width: 18%;
+  }
+  .t3{
+    width: 38%;
+  }
+  .t4{
+    width: 8%;
+  }
+  .t5{
+    width: 10%;
+  }      
+</style>
+ </head>
+
+ <body bgcolor='#ededed' class="gray-bg">
+
+ <center>
+    <input type='button' value='下载综合测评单' id='download_button' style="margin-top:7%;width:160px;
+  height:45px;font-size:18px;" onclick="" class='s_btn'/><br><br>
+  <span style="font-size: 17px">如无法下载请更换浏览器重试，网址：http://202.198.6.170</span>
+	 <div id="export_content"><br><br>
+	<div id='div_name' style="margin-top:1%;font-size:35px;">{$name}的综合素质测评成绩单</div>
+	<div id='div_score' style="font-size:26px;margin-top:3%;">考评成绩(折合后):{$kao}&nbsp;&nbsp;期末成绩(折合后):{$cheng}&nbsp;&nbsp;综合成绩:{$zong}</div>
+        
+<div class="wrapper wrapper-content animated fadeInRight">
+ 
+    
+                        <div  id="echarts-line-chart"></div>
+                         <div  id="echarts-bar-chart"></div>
+                        <div  id="echarts-scatter-chart"></div>
+                        <div  id="echarts-k-chart"></div>         
+        
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                  
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-pie-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-radar-chart"></div>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+
+ 
+    <!-- 全局js -->
+    <script src="__STATIC__/phone/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__STATIC__/phone/js/bootstrap.min.js?v=3.3.6"></script>
+
+
+
+    <!-- ECharts -->
+    <script src="__STATIC__/phone/js/plugins/echarts/echarts-all.js"></script>
+
+    <!-- 自定义js -->
+    <script src="__STATIC__/phone/js/content.js?v=1.0.0"></script>
+
+
+    <!-- ECharts demo data -->
+
+
+
+<!--table1-->
+	<table class='table1' id='table_1' cellspacing=0>
+	   <tr>
+	      <td rowspan=11 class="t1">思想道德及修养<br/>(满分100分占综合素质<br/>测评成绩的15%)</td>
+		  <td class="t2">满分100分</td>
+		  <td class="t3">加分或减分原因</td>
+		  <td class="t4">总分</td>
+		  <td class="t5">最终得分</td>
+	   </tr>
+	   <tr>
+		  <td>政治素质(10分)</td>
+		  <td>{volist name='bb18' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb18' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?> </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+		  <td>道德素质(10分)</td>
+		  <td> {volist name='bb19' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb19' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>法制观念(10分)</td>
+		  <td>{volist name='bb20' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb20' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?> </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>集体观念(10分)</td>
+		  <td>{volist name='bb1' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb1' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?> </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>诚信意识(10分)</td>
+		  <td>{volist name='bb21' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb21' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?>  </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>安全意识(10分)</td>
+		  <td>{volist name='bb22' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb22' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?>     
+				 </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>文明修养(10分)</td>
+		  <td>{volist name='bb23' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb23' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>学习态度(10分)</td>
+		  <td>{volist name='bb2' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb2' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?> </td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>生活态度(10分)</td>
+		  <td>{volist name='bb4' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb4' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?> </td>
+	   </tr>
+	   <tr>
+	      <td>卫生习惯(10分)</td>
+		  <td>{volist name='bb3' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+		  <td><?php $sum = 6;?>
+                {volist name='bb3' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+		  <td><?php 
+                if($sum*0.15<=1.5){
+               if($sum*0.15<=0){
+               echo '0';}else{
+               echo $sum*0.15;}}
+               else{
+               echo '1.5';
+           }?></td>
+	   </tr>
+	</table>
+
+<!--table2-->
+	<table class='table1' cellspacing=0>
+		<tr>
+			<td rowspan=2 class="t1">科学文化<br/>(满分100分占综合素质<br/>测评成绩的70%)</td>
+			<td class="t2">满分10分</td>
+			<td class="t3">加分或减分原因</td>
+			<td class="t4">总分</td>
+			<td class="t5">最终得分</td>
+		</tr>
+		<tr>
+			<td>学期内各课程平均成绩</td>
+			<td>{volist name='bb5' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb5' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.7<=70){
+               if($sum*0.7<=0){
+               echo '0';}else{
+               echo $sum*0.7;}}
+               
+               else{
+               echo '70';
+           }?> </td>
+		</tr>
+	</table>
+
+<!--table3-->
+	<table class='table1' cellspacing=0>
+		<tr>
+			<td rowspan=5 class="t1">体质健康<br/>(满分100分综合素质<br/>测评成绩的3%)</td>
+			<td class="t2">满分30分</td>
+			<td class="t3">加分或减分原因</td>
+			<td class="t4">总分</td>
+			<td class="t5">最终得分</td>
+		</tr>
+		<tr>
+			<td>体质健康状况<br/>(注:体侧合格给予加分，<br/>不合格给予扣分，<br/>满分30分)</td>
+			<td>{volist name='bb6' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb6' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.03<=0.9){
+               if($sum*0.03<=0){
+               echo '0';}else{
+               echo $sum*0.03;}}
+               
+               else{
+               echo '0.9';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>满分70分</td>
+			<td>加分或减分原因</td>
+			<td>总分</td>
+			<td>最终得分</td>
+		</tr>
+		<tr>
+			<td>阳光体育运动</td>
+			<td>{volist name='bb7' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb7' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.03<=2.1){
+               if($sum*0.03<=0){
+               echo '0';}else{
+               echo $sum*0.03;}}
+               
+               else{
+               echo '2.1';
+           }?> </td>
+		</tr>
+	</table>
+
+<!--table4-->
+	<table class='table1' cellspacing=0>
+		<tr>
+			<td rowspan=4 class="t1">文化活动<br/>(满分100分，占综合素质<br/>测评成绩的4%)</td>
+			<td class="t2">分类</td>
+			<td class="t3">加分或减分原因</td>
+			<td class="t4">总分</td>
+			<td class="t5">最终得分</td>
+		</tr>
+		<tr>
+			<td>参与校园活动情况</td>
+			<td>{volist name='bb8' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb8' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.04<=4){
+                if($sum*0.04<=0){
+               echo '0';}else{
+               echo $sum*0.04;}}
+              
+               else{
+               echo '4';
+           }?></td>
+		</tr>
+		<tr>
+			<td>文艺，艺术竞赛成绩</td>
+			<td>{volist name='bb9' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb9' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.04<=4){
+                if($sum*0.04<=0){
+               echo '0';}else{
+               echo $sum*0.04;}}
+               else{
+               echo '4';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>发表文艺，新闻作品</td>
+			<td>{volist name='bb10' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb10' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.04<=4){
+                if($sum*0.04<=0){
+               echo '0';}else{
+               echo $sum*0.04;}}
+               else{
+               echo '4';
+           }?> </td>
+		</tr>
+
+	</table>
+
+
+  <table class='table1' cellspacing=0>
+    <tr>
+      <td rowspan="2" class="t1">学生干部<br/>(满分100分，占综合素质<br/>测评成绩的2%)</td>
+      <td class="t2">分类</td>
+      <td class="t3">加分或减分原因</td>
+      <td class="t4">总分</td>
+      <td class="t5">最终得分</td>
+    </tr>    
+    <tr>
+
+      <td>任职状况</td>
+      <td>{volist name='bb17' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+      <td><?php $sum = 0;?>
+                {volist name='bb17' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+      <td><?php 
+               if($sum*0.02<=2){
+                if($sum*0.02<=0){
+               echo '0';}else{
+               echo $sum*0.02;}}
+               else{
+               echo '2';
+           }?> </td>
+    </tr>    
+
+  </table>
+
+
+
+<!--table5-->
+	<table class='table1' cellspacing=0>
+		<tr>
+			<td rowspan=7 class="t1">实践创新<br/>(满分100分，占综合素质<br/>测评成绩的6%)</td>
+			<td class="t2">分类</td>
+			<td class="t3">加分或减分原因</td>
+			<td class="t4">总分</td>
+			<td class="t5">最终得分</td>
+		</tr>
+		<tr>
+			<td>社会实践</td>
+			<td>{volist name='bb11' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb11' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>志愿服务</td>
+			<td>{volist name='bb12' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb12' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>创新创业</td>
+			<td>{volist name='bb13' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb13' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+                if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>学科竞赛</td>
+			<td>{volist name='bb14' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb14' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>学术著作</td>
+			<td>{volist name='bb15' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb15' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?> </td>
+		</tr>
+		<tr>
+			<td>实践技能</td>
+			<td>{volist name='bb16' id='vo'}
+                {$vo.activity} {$vo.grade}分;
+                {/volist}</td>
+			<td><?php $sum = 0;?>
+                {volist name='bb16' id='vo'}
+                <?php $sum += $vo['grade'];?>
+                {/volist}
+                 <?php echo $sum;?></td>
+			<td><?php 
+               if($sum*0.06<=6){
+               if($sum*0.06<=0){
+               echo '0';}else{
+               echo $sum*0.06;}}
+               else{
+               echo '6';
+           }?></td>
+		</tr>
+	</table>
+</div>
+	<div id='footer'>
+	信息技术学院&nbsp;|&nbsp;
+	<a href="{:url('first/index/ourphone')}" id='a_bottom'>关于我们</a>
+	</div>
+ </center>
+
+
+ <!--     
+数据库语句
+序号说明
+1   思想道德及行为修养
+2   科学文化
+3   体质健康
+4   文化活动
+5   实践创新
+6   学生干部
+
+语句
+
+SELECT
+sum(p.grade),
+t.two_id
+FROM
+    perform AS p
+LEFT JOIN three AS t ON p.three_id = t.three_id
+WHERE
+    p.number = 12165108
+AND
+    p.`year` = 2018
+AND
+    p.xq = 2
+GROUP BY
+    t.two_id
+ -->
+<?php
+if($a>15)$a = 15;
+if($b>70)$b = 70;
+if($c>3)$c = 3;
+if($d>4)$d = 4;
+if($e>6)$e = 6;
+if($f>2)$f = 2;
+?>
+
+<script >
+    $(function () {
+    
+    var pieChart = echarts.init(document.getElementById("echarts-pie-chart"));
+    var pieoption = {
+        title : {
+            text: '考评组成',
+            subtext: '二级指标',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient : 'vertical',
+            x : 'left',
+            data:['思想修养','科学文化','体质健康','文化活动','实践创新','学生干部']
+        },
+        calculable : true,
+        series : [
+            {
+                name:'成绩占比',
+                type:'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:{$a}, name:'思想修养'},
+                    {value:{$b}, name:'科学文化'},
+                    {value:{$c}, name:'体质健康'},
+                    {value:{$d}, name:'文化活动'},
+                    {value:{$e}, name:'实践创新'},
+                    {value:{$f}, name:'学生干部'}
+                ]
+            }
+        ]
+    };
+    pieChart.setOption(pieoption);
+    $(window).resize(pieChart.resize);
+
+    var radarChart = echarts.init(document.getElementById("echarts-radar-chart"));
+    var radaroption = {
+        title : {
+            text: '个人活动趋向',
+            
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            orient : 'vertical',
+            x : 'right',
+            y : 'bottom',
+            data:['']//按钮选择亮起
+            /*data:['预算分配','实际开销']*/
+        },
+        polar : [
+           {
+               indicator : [
+                   { text: '思想道德', max: 15},
+                   { text: '学习', max: 70},
+                   { text: '运动', max: 3},
+                   { text: '活动', max: 4},
+                   { text: '项目（实践）', max: 6},
+                   { text: '职务', max: 2}
+                ]
+            }
+        ],
+        calculable : true,
+        series : [
+            {
+                name: '预算 vs 开销',
+                type: 'radar',
+                data : [
+                    {
+                        value : [{$a}, {$b}, {$c}, {$d}, {$e}, {$f}],
+                        name : '预算分配'
+                    },
+                     /*{
+                        value : [5000, 14000, 28000, 31000, 42000, 21000],
+                        name : '实际开销'
+                    }*/
+
+                ]
+            }
+        ]
+    };
+
+    radarChart.setOption(radaroption);
+    $(window).resize(radarChart.resize);
+
+    
+
+});
+
+    </script>
+	<script type="text/javascript">
+    var downPdf = document.getElementById("download_button");
+    downPdf.onclick = function () {
+        html2canvas(
+                document.getElementById("export_content"),
+                {
+                    dpi: 500,//导出pdf清晰度
+                    onrendered: function (canvas) {
+                        var contentWidth = canvas.width;
+                        var contentHeight = canvas.height;
+
+                        //一页pdf显示html页面生成的canvas高度;
+                        var pageHeight = contentWidth / 592.28 * 841.89;
+                        //未生成pdf的html页面高度
+                        var leftHeight = contentHeight;
+                        //pdf页面偏移
+                        var position = 0;
+                        //html页面生成的canvas在pdf中图片的宽高（a4纸的尺寸[595.28,841.89]）595.28   592.28
+                        var imgWidth = 595.28;
+                        var imgHeight = 592.28 / contentWidth * contentHeight;
+
+                        var pageData = canvas.toDataURL('image/jpeg', 1.0);
+                        var pdf = new jsPDF('', 'pt', 'a4');
+
+                        //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+                        //当内容未超过pdf一页显示的范围，无需分页
+                        if (leftHeight < pageHeight) {
+                            pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                        } else {
+                            while (leftHeight > 0) {
+                                pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+                                leftHeight -= pageHeight;
+                                position -= 841.89;
+                                //避免添加空白页
+                                if (leftHeight > 0) {
+                                    pdf.addPage();
+                                }
+                            }
+                        }
+                        pdf.save('content.pdf');
+                    },
+                    //背景设为白色（默认为黑色）
+                    background: "#fff"  
+                })
+    }
+</script>
+ </body>
+</html>

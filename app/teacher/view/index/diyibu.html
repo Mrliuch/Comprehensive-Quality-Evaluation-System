@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>学生首页</title>
+  <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/sy.css"/>
+  <script type="text/javascript" src='__STATIC__/admin/js/.js'></script>
+ </head>
+  <body  style="background-color:#EDEDED;">
+    <script type="text/javascript"> 
+window.onload = function() {  
+var show = document.getElementById("show");  
+setInterval(function() {   
+var time = new Date();   // 程序计时的月从0开始取值后+1   
+var m = time.getMonth() + 1;   
+var t = time.getFullYear() + "-" + m + "-"     
++ time.getDate() + " " + time.getHours() + ":"     
++ time.getMinutes() + ":" + time.getSeconds();   
+show.innerHTML = "当前时间： "+t;  
+}, 1000); 
+};
+</script> 
+
+<style>
+
+.a2{
+	box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+	font-family:幼圆;
+	position: relative;
+	margin: 0 auto;
+	top: 35px;
+	width:74%;
+	height:180px;
+	background-color:#ffffff;
+	border-radius: 5px 5px 5px 5px;
+    left: 0;
+  }
+	.a12{
+				position: relative;
+				left:42%;
+				top:50px;
+				float:left;
+				font-family:幼圆;
+				font-size:20px;
+			
+			}
+				.s_btn {
+				font-size: 15px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+
+			}
+				.s_btn1 {
+				font-size: 16px;
+				padding-top: 1px;
+				border-radius: 5px 5px 5px 5px;
+				text-decoration:none;
+
+			}
+
+			.b1{
+			border-radius: 5px 5px 5px 5px;
+   box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+   width:100%;
+			}
+			.b2{
+			border-radius: 5px 5px 5px 5px;
+			   box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+			   width:100%;
+	
+			}
+	.text_style{
+		position: relative;
+		left: 76%;
+		top: -16px;
+		font-size: 14px;
+	}
+	.text_style2{
+		position: fixed;
+		left:22.5%;
+		top: 253px;
+		float: left;
+	}
+
+</style>
+
+<div>
+   <div class='a2'>
+		<div class='a3'>
+			<div><strong>选择显示几月综合测评成绩单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></div>
+			<div id='show' class="text_style" size='1px' color='#0033ff' style="left: 90%">
+				
+			</div>
+			<div>
+				当前已显示：{$year}年 {volist name='yue' id='vo'} {$vo.yue}<?php echo ' ';?>{/volist} 月
+			</div>
+		</div></br>
+
+<form action="{:url('add/view')}" method="post">
+		<div class='a4'><hr></div>
+		<div class='a5'></div>
+		<div class='a6'>
+			<select name="year" class='a7'>
+			<option value ="2018">2018 </option>
+			  <option value ="2019">2019</option>
+			  <option value="2020">2020</option>
+			  <option value="2021">2021</option>
+			  <option value="2021">2022</option>
+			  <option value="2021">2023</option>
+			  <option value="2021">2024</option>
+			  <option value="2021">2025</option>
+			</select> 
+			<div class='a11' style="font-family: 幼圆;font-size: 17px ; position: absolute;left: 25%">
+				<label><input name="a" type="checkbox" value="1" />1月 </label>
+				<label><input name="b" type="checkbox" value="1" />3月 </label>
+				<label><input name="c" type="checkbox" value="1" />4月 </label>
+				<label><input name="d" type="checkbox" value="1" />5月 </label>
+				<label><input name="e" type="checkbox" value="1" />6月 </label>
+				<label><input name="f" type="checkbox" value="1" />7月 </label>
+				<label><input name="g" type="checkbox" value="1" />9月 </label>
+				<label><input name="h" type="checkbox" value="1" />10月 </label>
+				<label><input name="i" type="checkbox" value="1" />11月 </label>
+				<label><input name="j" type="checkbox" value="1" />12月 </label>
+			</div>
+			</div>
+			<div class='a8'><input type="submit" tabindex="3" id="su" value="确 认" class="s_btn"></div>
+			
+
+
+</form> 
+
+<div class='b1'>
+	<div class='a3'><strong>学期期末确认存档&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+
+	</div></br>
+					<div class='a4'><hr></div>
+					<div class='a5'></div>
+					<div class='a12'>
+						 <a href="{:url('cj/cun')}" style="text-decoration:none;">
+							 <input type="submit" value="确认与查看成绩" class='s_btn1'>
+						 </a>
+					</div>
+
+
+						<div class='b2'>
+							<div class='a3'><strong>登录者授权</strong></div></br>
+								 <div class='a4'><hr></div>
+								 <div class='a13'>
+								 <a href="{:url('add/shouquan')}" style="text-decoration:none;">
+									 <input type="submit" value="点击进入授权界面" class='s_btn1'/>
+								 </a>
+						</div>
+
+
+
+						<div class='b2'>
+
+							<div class='a3'><strong>开启/关闭反馈功能</strong></div></br>
+								 <div class='a4'><hr></div><br><center><b>当前状态：{$str}</b></center>
+								 <div class='a13' style="left: 32%;top: 30px">
+								 <a href="{:url('index/openfan')}" style="text-decoration:none;">
+									 <input type="submit" value="开启反馈功能" class='s_btn1'/></a>
+									 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									 <a href="{:url('index/clossfan')}" style="text-decoration:none;"><input type="submit" value="关闭反馈功能" class='s_btn1'/></a>
+								 
+						</div>
+
+					</div>
+
+                    
+
+		<div class='b4'>
+
+			<a href='#' style='text-decoration:none;'>信息技术学院</a>|<a href="{:url('first/index/our')}" style='text-decoration:none;'>关于我们</a>
+	</div>
+</div>
+    
+</body>
+
+  </html>

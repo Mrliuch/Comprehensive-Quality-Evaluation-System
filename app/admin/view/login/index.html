@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>学生干部登陆</title>
+ </head>
+ <style type="text/css">
+ 	#i1{
+ 		position:absolute;
+ 		left:0px;
+ 		top:0px;
+ 	}
+ 	#i2{
+ 		position:absolute;
+ 		left:77%;
+ 		top:9%;
+ 		width:17%;
+ 	}
+ 	#signin{
+		position:absolute;
+		top:32%;
+		left:74%;
+		height:380px;
+		width:350px;
+		background-color:#ffffff;
+		text-align:center;
+		border-radius:8px;
+		padding-top:36px;
+	}
+	#ding{
+		font-family:Arial;
+		font-size:30px;
+		/*font-weight:bold;*/
+	}
+	.a1{
+		top:10px;
+		position:relative;
+ 	}
+ 	#zh{
+		background-color:#EEEEEE;
+		border:none;
+		border-radius:5px;
+		border-color:#BBBBBB;
+		border-width:1px;
+		outline:none;
+		padding:0 0 0 45px;
+		font-size:20px;
+		background-color:#EEEEEE;
+		 /*opacity:0.4;*/
+		 background-image:url('__STATIC__/admin/images/zhanghu.png');
+		 background-repeat: no-repeat;
+		 background-position: 4% 50%; 
+		 width:305px;
+		 height:40px;
+		 background-size: 20px;
+		 margin:42px 0px 0px 0px;
+	}
+	#mm{
+		background-color:#EEEEEE;
+		border-radius:5px;
+		border:none;
+		border-color:#BBBBBB;
+		border-width:1px;
+		outline:none;
+		padding:0 0 0 45px;
+		font-size:20px;
+		 background-image:url('__STATIC__/admin/images/mima.png');
+		 background-repeat: no-repeat;
+		 background-position:4% 50%; 
+		 width:305px;
+		 height:40px;
+		 background-size: 18px;
+		 margin:27px 0px 0px 0px;
+	}
+	#son{ 
+		border:none;
+		width:350px; 
+		height:45px; 
+		display:inline-block; /*ÏÔÊ¾divÖÐdiv*/
+		background-image: linear-gradient(90deg, #05C490,#06F3AB);
+		text-align:center;
+		line-height: 40px;/*µ±ÖµÓëdiv¸ß¶ÈÒ»ÖÂÊ±£¬divÖÐÎÄ±¾´¹Ö±Ë®Æ½*/
+		border-radius:5px;
+		 margin:50px 0px 30px 0px;
+	}
+	#button{
+		font-family:;
+		font-size:25px;
+		color:#fff;
+	}
+	#shr2{
+		font-size:15px;	
+		color:black;
+	}
+	a{
+		text-decoration: none;
+	}
+	#i3{
+		width:15%;
+		position:absolute;
+		top:30%;
+		left:78%;
+	}
+ </style>
+ <body>
+<img src='__STATIC__/admin/images/door.jpg' width='71%' id='i1'/>
+<img src='__STATIC__/admin/images/zi.png' id='i2'>
+<img src='__STATIC__/admin/images/line.png' id='i3'>
+<div  id='signin'>
+ <form   action="{:url('login/check')}" method="post">
+ <div class='a1'><font  id='ding' >学生干部登录</font></div>
+<input id='zh' name="username" type='text' placeholder="账号" />
+<input id='mm' name="password" type='password' placeholder="密码"/>
+<button type='submit'  id='son'><font id='button'>登陆</font></button>
+</form><table align='center' width='350px' id='shr'><tr>
+<td align="left"><a href="{:url('teacher/login/index')}"><font id='shr2'>教师登录</font></a></td>
+<td><a href="{:url('student/login/index')}"><font id='shr2'>学生查询</font></a></td>
+ <td align="right"><a href="{:url('index/login/index')}"><font id='shr2'>办公室登陆</font></a></td>
+</tr></table>  </div>
+ </body>
+</html>
