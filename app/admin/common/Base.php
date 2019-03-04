@@ -8,8 +8,6 @@ class Base extends Controller
       protected function _initialize(){
       	//parent:: _initialize;
       	//判断用户登录状态
-      	
-
 
       }
 

@@ -6,27 +6,27 @@ use think\Controller;
 class Index extends Controller
 {
 	//
-	public function develop()
+	public function develop() //待开发界面
 	{
       return $this ->view ->fetch('develop');
 	}
 
-		public function developphone()
+		public function developphone()  //待开发手机版
 	{
       return $this ->view ->fetch('developphone');
 	}
 
-		public function errorr()
+		public function errorr()  //错误界面(未启用)
 	{
       return $this ->view ->fetch('error');
 	}
 
-		public function errorrphone()
+		public function errorrphone()  //错误界面手机版（未启用）
 	{
       return $this ->view ->fetch('errorphone');
 	}
 
-		public function our()
+		public function our()  //关于我们
 	{
 
       if($this->isMobile()){
@@ -36,12 +36,12 @@ class Index extends Controller
       }
 	}
 
-		public function ourphone()
+		public function ourphone()  //关于我们手机
 	{
       return $this ->view ->fetch('ourphone');
 	}
 
-	public function index()
+	public function index() //开发进程及花絮界面
 	{
       return $this ->view ->fetch('index');
 	}
